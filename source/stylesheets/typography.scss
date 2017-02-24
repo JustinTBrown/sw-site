@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:400i');
+
+// Font Stacks
+$sans-font: 'din-2014', sans-serif; // Typekit
+$serif-font: 'Roboto Slab', serif; // Google Font
+$italic-font: 'Roboto', sans-serif; // Google Font
+
+
+
+
+// Type System
+body {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-font;
+  color: $blue-shade-2;
+
+  &.box {
+    color: $white;
+  }
+
+  &.light {
+    color: $white;
+  }
+}
+
+p, em {
+  color: $dark-grey;
+  
+  &.light {
+    color: $white;
+  }  
+}
+
+p {
+  font-family: $serif-font;
+  font-size: 0.9em;
+}
+
+em {
+  font-family: $italic-font;
+}
+
+.label-1, .label-2 {
+  font-family: $sans-font;
+  color: $dark-grey;
+  text-transform: uppercase;
+}
+
+.label-1 {
+  font-size: 0.8em;
+}
+
+.label-2 {
+  font-size: 0.6em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
