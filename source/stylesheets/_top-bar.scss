@@ -1,0 +1,40 @@
+.top-bar-container {
+  top: 0;
+  position: fixed;
+  height: $top-bar-height;
+  width: $container-width;
+  border-bottom: solid 1px $white-shade-1;
+
+  .top-bar {
+    @include grid-container;
+    // position: relative;
+    @include vertical-align(); 
+    // @include grid-column(12);
+    // height: 80px;
+    // padding-top: 20px;
+    // padding-bottom: 20px;
+
+    .logo {
+      @import "logo";
+      // @include vertical-align(); 
+      display: inline-block;
+      // background-color: #000;
+
+      // min-height: 33px;
+      // min-width: 150px;
+      // background-repeat: no-repeat;
+      
+    }
+    
+    ul {
+      // @include vertical-align(); 
+      float: right;
+
+      li {
+        display: inline-block;
+        padding-left: 2em;
+      }
+        
+    }
+  }
+}
