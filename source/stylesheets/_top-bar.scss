@@ -3,7 +3,8 @@
   position: fixed;
   height: $top-bar-height;
   width: $container-width;
-  border-bottom: solid 1px $white-shade-1;
+  // border-bottom: solid 1px $white-shade-1;
+  @include border-bottom();
 
   .top-bar {
     @include grid-container;
@@ -33,6 +34,14 @@
       li {
         display: inline-block;
         padding-left: 2em;
+
+        a {
+          color: $salmon;
+
+          &:hover {
+            color: $blue-shade-2;
+          }
+        }
       }
         
     }

@@ -17,54 +17,98 @@ body {
   margin: 0 auto;
 }
 
-.intro {
-  @include grid-container;
+section.intro {
+  // @include grid-container;
 
   // padding-top: $top-bar-height;
   padding-top: 20px;
   margin-top: $top-bar-height;
+  position: relative;
+  height: 500px;
+  @include border-bottom();
 
   .tagline {
-    @include grid-column(6);
+    // @include grid-column(6);
+    @include vertical-align();
+    width: 45%;
+    display: inline-block;
+    z-index: 1;
   }
 
   .image {
-    @include grid-column(6);
+    // @include grid-column(6);
+    width: 60%;
+    /* float: right; */
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    z-index: -1;
   }
 }
 
-// .block-list {
-//   .subhead {
-//     @extend .label-2;
-//   }
+section.what {
+  @include grid-container;
+  // @include grid-column(12);
+  // @include grid-collapse;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  text-align: center;
 
-//   &.light {
+  .heading-wrapper {
+    @include grid-container;
+    @include grid-column(12);
+    h2 {
+      // @include grid-column(12);
+      // margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
 
-//   }
-// }
+  .block-list-wrapper {
+    // @include grid-container;
+    // @include grid-push(2);
+    // @include grid-column(8);
+    
+    ul {
+      @include grid-container;
+      // @include grid-shift(2);
+      @include grid-column(8);
+      @include grid-push(2);
+      // @include grid-column(12);
+      text-align: left;
 
-// body {
-//   // background-color: #fbc547;
-//   background-color: $blue-shade-2;
-//   color: #333;
-//   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-//     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-//     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-//     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-//   padding: 18vh 1rem;
-//   text-align: center;
-// }
+      li {
+        @include grid-container;
+        // @include grid-column(8);
+        // @include grid-push(2);
+        margin-bottom: 50px;
+        &:first-of-type {
+          margin-top: 50px;
+        }
 
-// a {
-//   color: rgba(#000, 0.7);
+        img {
+          @include grid-column(6);
+        }
 
-//   &:focus,
-//   &:hover {
-//     color: rgba(#000, 0.6);
-//   }
-// }
+        .text {
+          // @include grid-push(2);
+          @include grid-column(6);
 
-// .middleman-logo {
-//   margin-bottom: 1rem;
-//   width: 10rem;
-// }
+          .label-2 {
+            color: $blue-shade-2;
+          }
+        }
+      }
+    }
+  }
+
+  .more-link {
+    @include grid-container;
+    @include grid-column(12);
+    color: $salmon;
+  }
+
+  @include border-bottom();
+}

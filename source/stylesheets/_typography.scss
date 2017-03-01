@@ -1,7 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:400i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto:400i|Roboto+Condensed:400,700');
+@import url('//fast.fonts.net/cssapi/1e9b7e06-16c7-4384-8f76-8b995d987481.css');
+
+// @font-face {
+//     font-family: 'dinbold';
+//     src: url('fonts/din_bold-webfont.woff2') format('woff2'),
+//          url('fonts/din_bold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+//     font-family: 'din_mediumregular';
+//     src: url('din_medium-webfont.woff2') format('woff2'),
+//          url('din_medium-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+// font-family:'DIN_1451 LT W01 Mittelschrift';
+// font-family:'DIN Next W01 Regular';
+// font-family:'DIN Next W01 Medium';
+// font-family:'DIN Next W01 Bold';
+// font-family:'DIN Neuzeit Grotesk W01 Bold';
+
 
 // Font Stacks
-$sans-font: 'din-2014', sans-serif; // Typekit
+// $sans-font: 'dinbold', sans-serif; // Font-Face
+// $sans-font: 'din_mediumregular', sans-serif; // Font-Face
+// $sans-font: 'DIN Next W01 Regular', sans-serif; // Font-Face
+$sans-font: 'DIN Next W01 Medium', sans-serif; // Font-Face
+// $sans-font: 'DIN Next W01 Bold', sans-serif; // Font-Face
+// $sans-font: 'din-2014', sans-serif; // Typekit
+// $sans-font: 'Roboto Condensed', sans-serif; // Google Font
 $serif-font: 'Roboto Slab', serif; // Google Font
 $italic-font: 'Roboto', sans-serif; // Google Font
 
@@ -10,20 +42,47 @@ $italic-font: 'Roboto', sans-serif; // Google Font
 
 // Type System
 body {
+  color: $dark-grey;
+  font-family: $serif-font;
   font-size: 16px;
+  font-weight: normal;
+  // font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $sans-font;
   color: $blue-shade-2;
+  // font-weight: 400;
+  // font-weight: 600;
+  // font-weight: 700;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.1em;
 
   &.box {
     color: $white;
+    background-color: $blue-shade-2;
+    display: inline-block;
+    padding: 0.8em 1.1em 0.6em;
+    text-transform: uppercase;
+    // font-weight: 400;
   }
 
   &.light {
     color: $white;
   }
+}
+
+h2 {
+  font-size: 1em;
+}
+
+h3 {
+  color: $salmon;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.2em;
 }
 
 p, em {
@@ -37,16 +96,23 @@ p, em {
 p {
   font-family: $serif-font;
   font-size: 0.9em;
+  font-weight: 300;
 }
 
 em {
   font-family: $italic-font;
 }
 
+a {
+  color: $dark-grey;
+  text-decoration: none;
+}
+
 .label-1, .label-2 {
   font-family: $sans-font;
   color: $dark-grey;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .label-1 {
@@ -60,6 +126,15 @@ em {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+.tagline {
+  font-size: 3em;
+  font-weight: 100;
+
+  b {
+    font-weight: 300;
+  }
 }
 
 

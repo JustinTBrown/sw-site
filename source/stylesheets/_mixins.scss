@@ -5,3 +5,7 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+@mixin border-bottom() {
+  border-bottom: solid 1px $dark-grey-tint-2;
+}
