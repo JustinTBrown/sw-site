@@ -3,24 +3,17 @@
 @import "typography";
 @import "neat";
 @import "mixins";
-
 @import "top-bar";
-
-
 
 body {
   @include grid-container;
   background-color: $white;
-  // background-color: #e1d6f0;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='#{$white-shade-1}' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E"); // www.heropatterns.com
   max-width: 960px;
   margin: 0 auto;
 }
 
 section.intro {
-  // @include grid-container;
-
-  // padding-top: $top-bar-height;
   padding-top: 20px;
   margin-top: $top-bar-height;
   position: relative;
@@ -28,7 +21,6 @@ section.intro {
   @include border-bottom();
 
   .tagline {
-    // @include grid-column(6);
     @include vertical-align();
     width: 45%;
     display: inline-block;
@@ -36,9 +28,7 @@ section.intro {
   }
 
   .image {
-    // @include grid-column(6);
     width: 60%;
-    /* float: right; */
     display: inline-block;
     position: absolute;
     right: 0;
@@ -48,8 +38,6 @@ section.intro {
 
 section.what {
   @include grid-container;
-  // @include grid-column(12);
-  // @include grid-collapse;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   text-align: center;
@@ -58,8 +46,6 @@ section.what {
     @include grid-container;
     @include grid-column(12);
     h2 {
-      // @include grid-column(12);
-      // margin: 0 auto;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -67,22 +53,14 @@ section.what {
   }
 
   .block-list-wrapper {
-    // @include grid-container;
-    // @include grid-push(2);
-    // @include grid-column(8);
-    
     ul {
       @include grid-container;
-      // @include grid-shift(2);
       @include grid-column(8);
       @include grid-push(2);
-      // @include grid-column(12);
       text-align: left;
 
       li {
         @include grid-container;
-        // @include grid-column(8);
-        // @include grid-push(2);
         margin-bottom: 50px;
         &:first-of-type {
           margin-top: 50px;
@@ -93,11 +71,14 @@ section.what {
         }
 
         .text {
-          // @include grid-push(2);
           @include grid-column(6);
 
           .label-2 {
             color: $blue-shade-2;
+          }
+
+          p {
+            margin-top: 0.8em;
           }
         }
       }
@@ -109,6 +90,97 @@ section.what {
     @include grid-column(12);
     color: $salmon;
   }
-
   @include border-bottom();
+}
+
+section.select-drinks {
+  // @include grid-visual;
+  @include grid-container;
+  // @include grid-collapse;
+  // @include grid-column(12);
+  // @include grid-column(10);
+  // @include grid-push(1);
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .text {
+    @include grid-column(4);
+    p.section-intro {
+      margin-bottom: 2em;
+    }
+    ul.drinks {
+      li.drink {
+        margin-top: 3em;
+        margin-bottom: 3em;
+
+        .name {
+          color: $blue-shade-2;
+          display: block;
+          font-family: $sans-font;
+          text-transform: uppercase;
+          margin-bottom: 0.2em;
+        }
+        .notes {
+          color: $blue;
+        }
+        p.description {
+          font-size: 0.8em;
+          margin-top: 0.4em;
+          margin-bottom: 0.4em;
+        }
+      }
+    }
+  }
+  img {
+    @include grid-column(7);
+    @include grid-push(1);
+  }
+  .more-link {
+    // @include grid-container;
+    // @include grid-column(12);
+    color: $salmon;
+  }
+  @include border-bottom();
+}
+
+section.select-events {
+  // @include grid-collapse;
+  // @include grid-column(12);
+  @include grid-container;
+  // @include grid-visual;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  text-align: center;
+  
+  ul.events {
+    text-align: left;
+
+    li.event {
+      @include grid-column(4);
+      // @include grid-container;
+      // padding: 0 10px;
+      padding: 50px 0 50px;
+
+
+      .date {
+        text-transform: none;
+        color: $blue-shade-2;
+        font-size: 1em;
+      }
+      .name {
+        color: $salmon;
+        font-size: 1.2em;
+        margin: 4px 0 2px;
+      }
+    }
+  }
+  .more-link {
+    @include grid-container;
+    @include grid-column(12);
+    color: $salmon;
+  }
+  @include border-bottom();
+}
+
+section.contact {
+  @include grid-container;
 }

@@ -1,23 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto:400i|Roboto+Condensed:400,700');
 @import url('//fast.fonts.net/cssapi/1e9b7e06-16c7-4384-8f76-8b995d987481.css');
 
-// @font-face {
-//     font-family: 'dinbold';
-//     src: url('fonts/din_bold-webfont.woff2') format('woff2'),
-//          url('fonts/din_bold-webfont.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-
-// }
-
-// @font-face {
-//     font-family: 'din_mediumregular';
-//     src: url('din_medium-webfont.woff2') format('woff2'),
-//          url('din_medium-webfont.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-
-// }
 
 // font-family:'DIN_1451 LT W01 Mittelschrift';
 // font-family:'DIN Next W01 Regular';
@@ -27,12 +10,9 @@
 
 
 // Font Stacks
-// $sans-font: 'dinbold', sans-serif; // Font-Face
-// $sans-font: 'din_mediumregular', sans-serif; // Font-Face
-// $sans-font: 'DIN Next W01 Regular', sans-serif; // Font-Face
-$sans-font: 'DIN Next W01 Medium', sans-serif; // Font-Face
-// $sans-font: 'DIN Next W01 Bold', sans-serif; // Font-Face
-// $sans-font: 'din-2014', sans-serif; // Typekit
+// $sans-font: 'DIN Next W01 Regular', sans-serif; // Fonts.com
+$sans-font: 'DIN Next W01 Medium', sans-serif; // Fonts.com
+// $sans-font: 'DIN Next W01 Bold', sans-serif; // Fonts.com
 // $sans-font: 'Roboto Condensed', sans-serif; // Google Font
 $serif-font: 'Roboto Slab', serif; // Google Font
 $italic-font: 'Roboto', sans-serif; // Google Font
@@ -58,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-style: normal;
   letter-spacing: 0.1em;
+  margin-top: 0;
 
   &.box {
     color: $white;
@@ -95,8 +76,15 @@ p, em {
 
 p {
   font-family: $serif-font;
-  font-size: 0.9em;
+  // font-size: 0.9em;
+  font-size: 1em;
   font-weight: 300;
+  line-height: 1.5;
+
+  &.interface {
+    font-size: 0.8em;
+    font-weight: 400;
+  }
 }
 
 em {
@@ -116,11 +104,15 @@ a {
 }
 
 .label-1 {
-  font-size: 0.8em;
+  display: block;
+  font-size: 0.9em;
 }
 
 .label-2 {
-  font-size: 0.6em;
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.5;
+  margin-bottom: 0.2em;
 }
 
 ul {
