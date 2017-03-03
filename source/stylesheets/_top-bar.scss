@@ -3,30 +3,17 @@
   position: fixed;
   height: $top-bar-height;
   width: $container-width;
-  // border-bottom: solid 1px $white-shade-1;
   @include border-bottom();
 
   .top-bar {
-    // @include grid-container;
     height: 100%;
     position: relative;
-    // @include vertical-align(); 
-    // @include grid-column(12);
-    // height: 80px;
-    // padding-top: 20px;
-    // padding-bottom: 20px;
 
     .logo {
       @import "logo";
       @include vertical-align(); 
       display: inline-block;
       margin-top: $step1;
-      // background-color: #000;
-
-      // min-height: 33px;
-      // min-width: 150px;
-      // background-repeat: no-repeat;
-      
     }
     
     ul {
