@@ -89,9 +89,6 @@ section.select-drinks {
     @include grid-column(7);
     @include grid-push(1);
   }
-  .standalone {
-    color: $salmon;
-  }
   @include border-bottom();
 }
 
@@ -116,8 +113,41 @@ section.select-events {
 
 section.contact {
   @include grid-container;
-  padding-top: $section-padding;
+  @include grid-visual;
+  // @include grid-column(10);
+  // @include grid-push(1);
+  padding-top: 0;
   padding-bottom: $section-padding;
   text-align: center;
   background-image: url("/images/tropical-pattern.jpg");
+
+  .heading-box {
+    transform: translateY(-50%);
+  }
+  a.standalone, p {
+    color: $white;
+    max-width: 18em;
+    // padding: 0 2em;
+  }
+  .info, .details {
+    @include grid-column(6);
+    height: 200px;
+  }
+  .info {
+    text-align: right;
+    position: relative;
+    a.standalone {
+      @include vertical-align();
+      margin-right: 1em;
+    }
+    
+  }
+  .details {
+    text-align: left;
+    p {
+      @include vertical-align();
+      margin-left: 1em;
+    }
+    
+  }
 }

@@ -4,7 +4,7 @@ ul.drinks {
   padding-top: $step4;
 
   li.drink {
-    // @include grid-column(4);
+    // @include grid-column(4); // Add column contstraint to component instance
     max-width: 20rem;
     margin-top: $step3;
     margin-bottom: $step4;
