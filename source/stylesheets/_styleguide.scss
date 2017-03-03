@@ -1,24 +1,26 @@
-body {
-  background: none;
-}
-
 .styleguide {
-  background: none;
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;
+  // background: none;
+  // background-color: $white;
+  background-color: white;
 
   h2.actual {
     text-align: center;
     color: $dark-grey-shade-2;
     margin-bottom: $step5;
     margin-top: $step5;
-    border-bottom: solid 1px $dark-grey-tint-1;
+    padding-top: $step2;
+    border: solid 2px $dark-grey-shade-1;
   }
   h3.actual {
     color: $dark-grey;
-    border-bottom: solid 1px $dark-grey-tint-1;
+    border-bottom: solid 1px $dark-grey-tint-2;
     margin-bottom: $step4;
     margin-top: $step5;
+  }
+  section {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    
   }
 
   section.typography {
@@ -26,11 +28,62 @@ body {
     // @include grid-collapse;
 
     .regular-headings, .box-headings {
-      @include grid-column(6);
+      @include grid-column(4);
+    }
+    .regular-headings {
+      @include grid-push(1);
+    }
+    .box-headings {
+      @include grid-push(2);
     }
     .copy {
+      @include grid-container;
       @include grid-column(6);
       @include grid-push(3);
     }
+    .other-copy {
+      @include grid-container;
+      @include grid-column(12);
+    }
+  }
+
+  section.colours {
+    ul.palette {
+      @include grid-container;
+
+      li.colour {
+        @include grid-column(3);
+
+        .swatch {
+          height: 100px;
+        }
+
+        &.c1 {
+          .swatch {
+            background-color: $dark-grey;
+          }
+        }
+        &.c2 {
+          .swatch {
+            background-color: $salmon;
+          }
+        }
+        &.c3 {
+          .swatch {
+            background-color: $white;
+          }
+        }
+        &.c4 {
+          .swatch {
+            background-color: $blue;
+          }
+        }
+      }
+      
+    }
+  }
+
+  section.components {
+
   }
 }

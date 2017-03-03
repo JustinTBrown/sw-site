@@ -1,24 +1,57 @@
 // Menu Items
 ul.drinks {
-  li.drink {
-    max-width: 20rem;
-    // margin-top: 3em;
-    // margin-bottom: 3em;
+  @include grid-container;
+  padding-top: $step4;
 
-    .name {
-      // color: $blue-shade-2;
-      // display: block;
-      // font-family: $sans-font;
-      // text-transform: uppercase;
-      // margin-bottom: 0.2em;
+  li.drink {
+    @include grid-column(4);
+    max-width: 20rem;
+    margin-top: $step3;
+    margin-bottom: $step4;
+    p.name {
+
     }
-    .notes {
+    p.notes {
       color: $blue;
     }
     p.description {
-      // font-size: 0.8em;
-      // margin-top: 0.4em;
-      // margin-bottom: 0.4em;
+
+    }
+  }
+}
+
+// Events
+ul.events {
+  @include grid-container;
+  // text-align: left;
+  padding-top: $step4;
+
+  li.event {
+    @include grid-column(4);
+    max-width: 20rem;
+    margin-top: $step4;
+    margin-bottom: $step4;
+    // // @include grid-container;
+    // // padding: 0 10px;
+    // padding: 50px 0 50px;
+
+
+    .date {
+      text-transform: none;
+      color: $blue-shade-1;
+      // font-size: 1em;
+    }
+    .name {
+      color: $salmon;
+      // font-size: 1.2em;
+      // margin: 4px 0 2px;
+    }
+    .location, .time {
+      color: $dark-grey;
+    }
+    .description {
+      margin-top: $step3;
+
     }
   }
 }

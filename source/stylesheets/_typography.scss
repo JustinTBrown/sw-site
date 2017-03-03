@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto:400i|Roboto+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto:300i,400i|Roboto+Condensed:400,700');
 @import url('//fast.fonts.net/cssapi/1e9b7e06-16c7-4384-8f76-8b995d987481.css');
 
 
@@ -34,9 +34,9 @@ body {
   color: $dark-grey;
   font-family: $serif-font;
   font-size: $root-size;
-  // font-weight: normal;
+  font-weight: normal;
   line-height: $line-height;
-  font-weight: 300;
+  // font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -48,14 +48,14 @@ h1, h2, h3, h4, h5, h6,
   // font-weight: 400;
   // font-weight: 600;
   // font-weight: 700;
-  // font-weight: normal;
+  font-weight: normal;
   // font-style: normal;
-  // letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
   margin-top: 0;
   margin-bottom: 0;
 
   &.box {
-    color: $white;
+    color: $white-tint-1;
     background-color: $blue-shade-2;
     display: inline-block;
     padding: 0.8em 1.1em 0.6em;
@@ -66,6 +66,9 @@ h1, h2, h3, h4, h5, h6,
   // &.light {
   //   color: $white;
   // }
+}
+.heading-box {
+  margin-bottom: $step2;
 }
 h1, .h1 {
   font-size: 2rem;
@@ -106,7 +109,7 @@ p {
   // font-family: $serif-font;
   // // font-size: 0.9em;
   // font-size: 1em;
-  // font-weight: 300;
+  font-weight: 300;
   // line-height: 1.5;
 
   &.interface {
@@ -116,14 +119,21 @@ p {
   }
 }
 
-// em {
-//   font-family: $italic-font;
-// }
+em {
+  font-family: $italic-font;
+  font-weight: 300;
+}
 
-// a {
-//   color: $dark-grey;
-//   text-decoration: none;
-// }
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue-shade-1;
+    color: $white-shade-2;
+    // text-decoration: underline;
+  }
+}
 
 // .label-1, .label-2 {
 //   font-family: $sans-font;
@@ -149,14 +159,28 @@ ul {
   padding-left: 0;
 }
 
-// .tagline {
-//   font-size: 3em;
-//   font-weight: 100;
+blockquote.pullquote {
+  font-family: $italic-font;
+  font-weight: 300;
+  quotes: "“" "”" "‘" "’";
 
-//   b {
-//     font-weight: 300;
-//   }
-// }
+  &:before {
+    content: open-quote;
+  }
+  &:after {
+    content: close-quote;
+  }
+}
+
+.tagline {
+  font-size: 3em;
+  font-weight: 100;
+  line-height: 1.25;
+
+  strong {
+    font-weight: 300;
+  }
+}
 
 
 

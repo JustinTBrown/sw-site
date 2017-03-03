@@ -131,28 +131,6 @@ section.select-events {
   padding-bottom: $section-padding;
   text-align: center;
   
-  ul.events {
-    text-align: left;
-
-    li.event {
-      @include grid-column(4);
-      // @include grid-container;
-      // padding: 0 10px;
-      padding: 50px 0 50px;
-
-
-      .date {
-        text-transform: none;
-        color: $blue-shade-2;
-        font-size: 1em;
-      }
-      .name {
-        color: $salmon;
-        font-size: 1.2em;
-        margin: 4px 0 2px;
-      }
-    }
-  }
   .more-link {
     @include grid-container;
     @include grid-column(12);
