@@ -7,9 +7,10 @@
   @include border-bottom();
 
   .top-bar {
-    @include grid-container;
-    // position: relative;
-    @include vertical-align(); 
+    // @include grid-container;
+    height: 100%;
+    position: relative;
+    // @include vertical-align(); 
     // @include grid-column(12);
     // height: 80px;
     // padding-top: 20px;
@@ -17,8 +18,9 @@
 
     .logo {
       @import "logo";
-      // @include vertical-align(); 
+      @include vertical-align(); 
       display: inline-block;
+      margin-top: $step1;
       // background-color: #000;
 
       // min-height: 33px;
@@ -28,7 +30,7 @@
     }
     
     ul {
-      // @include vertical-align(); 
+      @include vertical-align(); 
       float: right;
 
       li {

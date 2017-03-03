@@ -3,6 +3,14 @@
   // background-color: $white;
   background-color: white;
 
+  h1.title {
+    font-size: 3rem;
+    text-align: center;
+    // padding-top: 50px;
+    margin-top: 60px;
+    padding-top: 100px;
+  }
+
   h2.actual {
     text-align: center;
     color: $dark-grey-shade-2;
@@ -20,7 +28,7 @@
   section {
     padding-top: $section-padding;
     padding-bottom: $section-padding;
-    
+
   }
 
   section.typography {
