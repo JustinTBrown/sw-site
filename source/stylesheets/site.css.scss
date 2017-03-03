@@ -79,45 +79,37 @@ section.what {
 }
 
 section.select-drinks {
-  // @include grid-visual;
   @include grid-container;
-  // @include grid-collapse;
-  // @include grid-column(12);
-  // @include grid-column(10);
-  // @include grid-push(1);
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .text {
     @include grid-column(4);
-    p.section-intro {
-      margin-bottom: 2em;
-    }
   }
   img {
     @include grid-column(7);
     @include grid-push(1);
   }
-  .more-link {
-    // @include grid-container;
-    // @include grid-column(12);
+  .standalone {
     color: $salmon;
   }
   @include border-bottom();
 }
 
 section.select-events {
-  // @include grid-collapse;
-  // @include grid-column(12);
   @include grid-container;
   // @include grid-visual;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
-  text-align: center;
   
-  .more-link {
+  .heading-box {
+    text-align: center;
+  }
+  
+  .standalone {
     @include grid-container;
     @include grid-column(12);
-    color: $salmon;
+    // color: $salmon;
+    text-align: center;
   }
   @include border-bottom();
 }

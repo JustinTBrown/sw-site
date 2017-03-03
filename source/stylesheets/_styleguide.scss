@@ -92,6 +92,8 @@
   }
 
   section.components {
-
+    li.drink {
+      @include grid-column(4);
+    }
   }
 }
