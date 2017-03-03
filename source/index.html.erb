@@ -3,27 +3,15 @@ title: Sugar Water
 ---
 <div class="top-bar-container">
   <div class="top-bar">
-    <!-- <img src="http://dummyimage.com/100x50/4d494d/686a82.gif&text=placeholder+image" alt="Sugar+Water"> -->
     <div class="logo">
       <span class="svg-logo"></span>
     </div>
-
     <ul class="menu h5">
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Menu</a>
-      </li>
-      <li>
-        <a href="#">Events</a>
-      </li>
-      <li>
-        <a href="#">About Us</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </div>
 </div>
@@ -31,22 +19,22 @@ title: Sugar Water
 <section class="intro">
 
   <span class="tagline">
-    Thoughtfully crafted <b>drinks</b> in <b>uncommon spaces</b>
+    Thoughtfully crafted <strong>drinks</strong> in <strong>uncommon spaces</strong>
   </span>
   <img class="image" src="images/Grapefruit-bittersweet-large.png" alt="">
 </section>
 
 <section class="what">
-  <div class="heading-wrapper">
-    <h2 class="box">What We Do</h2>
+  <div class="heading-box">
+    <h2 class="box h4">What We Do</h2>
   </div>
-  <div class="block-list-wrapper">
+  <!-- <div class="block-list-wrapper"> -->
     <ul class="block-list">
       <li>
         <img src="images/MC7-Saturday-202 Copy.jpg" alt="">
         <div class="text">
           <h3>Setup Anywhere</h3>
-          <div class="subhead label-2">Nulla venenatis, justo semper luctus sagittis, leo urna.</div>
+          <p class="subhead h5">Nulla venenatis, justo semper luctus sagittis, leo urna.</p>
           <p>
             Ut elit urna, dapibus at nunc in, malesuada hendrerit sem. Vivamus risus sapien, lobortis sit amet mauris.
           </p>
@@ -56,9 +44,9 @@ title: Sugar Water
         <img src="images/MCxCCCmay2015-081.jpg" alt="">
         <div class="text">
           <h3>Custom Menu</h3>
-          <div class="subhead label-2">
+          <p class="subhead h5">
             Phasellus vitae diam consequat, egestas eros.
-          </div>
+          </p>
           <p>
             Donec eu vestibulum enim, sed finibus ligula. Proin porta in nisi in lacinia. Fusce at diam eleifend, mollis tellus et, scelerisque lorem. Vivamus sollicitudin.
           </p>
@@ -68,22 +56,24 @@ title: Sugar Water
         <img src="images/IMG_5109.jpg" alt="">
         <div class="text">
           <h3>Best Crew</h3>
-          <div class="subhead label-2">
+          <p class="subhead h5">
             Nulla facilisi. Etiam maximus, purus quis imperdiet.
-          </div>
+          </p>
           <p>
             Maecenas a sapien sodales, tristique magna id, dictum libero. Cras ornare nisl ut ex commodo, a faucibus diam accumsan. Proin dignissim, dui.
           </p>
         </div>
       </li>
     </ul>
-  </div>
-  <a class="label-1 more-link" href="#">More on Our Services</a>
+  <!-- </div> -->
+  <a class="standalone h5" href="#">More on Our Services</a>
 </section>
 
 <section class="select-drinks">
   <div class="text">
-    <h2 class="box">Drinks</h2>
+    <div class="heading-box">
+      <h2 class="box h4">Drinks</h2>
+    </div>
     <p class="section-intro">We’re always playing and experimenting. Here’s some recent additions to our family of original drinks.</p>
     <ul class="drinks">
       <li class="drink">
@@ -105,7 +95,9 @@ title: Sugar Water
 </section>
 
 <section class="select-events">
-  <h2 class="box">Events</h2>
+  <div class="heading-box">
+    <h2 class="box h4">Events</h2>
+  </div>
   <ul class="events">
     <li class="event">
       <span class="date label-1">Friday, February 3</span>
@@ -133,7 +125,9 @@ title: Sugar Water
 </section>
 
 <section class="contact">
-  <h2 class="box">Get in Touch</h2>
+  <div class="heading-box">
+    <h2 class="box h4">Get in Touch</h2>
+  </div>
   <p>Nunc orci nisi, aliquam ac orci in, bibendum ultricies dolor. Integer convallis mattis enim sed ornare. Aenean mollis elementum ipsum, ac.</p>
   <%= link_to "hello@sugarwater.bar", "mailto:hello@sugarwater.bar" %>
   <img src="http://dummyimage.com/600x400/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">

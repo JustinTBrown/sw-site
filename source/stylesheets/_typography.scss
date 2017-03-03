@@ -127,14 +127,17 @@ em {
 a {
   color: $blue;
   text-decoration: none;
-
   &:hover {
-    color: $blue-shade-1;
-    color: $white-shade-2;
-    // text-decoration: underline;
+    color: $salmon;
   }
 }
 
+a.standalone {
+  color: $salmon;
+  &:hover {
+    color: $blue;
+  }
+}
 // .label-1, .label-2 {
 //   font-family: $sans-font;
 //   color: $dark-grey;
@@ -181,6 +184,7 @@ blockquote.pullquote {
     font-weight: 300;
   }
 }
+
 
 
 

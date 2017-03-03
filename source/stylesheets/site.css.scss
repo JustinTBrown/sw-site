@@ -24,7 +24,7 @@ section.intro {
 
   .tagline {
     @include vertical-align();
-    width: 45%;
+    width: 52%;
     display: inline-block;
     z-index: 1;
   }
@@ -42,55 +42,38 @@ section.what {
   @include grid-container;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
-  text-align: center;
-
-  .heading-wrapper {
-    @include grid-container;
-    @include grid-column(12);
-    h2 {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
+  .heading-box {
+    text-align: center;
   }
+  ul {
+    @include grid-container;
+    @include grid-column(10);
+    @include grid-push(1);
 
-  .block-list-wrapper {
-    ul {
+    li {
       @include grid-container;
-      @include grid-column(8);
-      @include grid-push(2);
-      text-align: left;
-
-      li {
-        @include grid-container;
-        margin-bottom: 50px;
-        &:first-of-type {
-          margin-top: 50px;
+      margin-bottom: 50px;
+      &:first-of-type {
+        margin-top: 50px;
+      }
+      img {
+        @include grid-column(6);
+      }
+      .text {
+        @include grid-column(6);
+        h3 {
+          color: $salmon;
         }
-
-        img {
-          @include grid-column(6);
-        }
-
-        .text {
-          @include grid-column(6);
-
-          .label-2 {
-            color: $blue-shade-2;
-          }
-
-          p {
-            margin-top: 0.8em;
-          }
+        .subhead {
+          color: $blue-shade-2;
         }
       }
     }
   }
-
-  .more-link {
+  .standalone {
     @include grid-container;
     @include grid-column(12);
-    color: $salmon;
+    text-align: center;
   }
   @include border-bottom();
 }
