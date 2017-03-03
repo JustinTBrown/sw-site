@@ -17,116 +17,147 @@ $sans-font: 'DIN Next W01 Medium', sans-serif; // Fonts.com
 $serif-font: 'Roboto Slab', serif; // Google Font
 $italic-font: 'Roboto', sans-serif; // Google Font
 
+$root-size: 18px;
+$line-height: 1.5;
 
+// Spacing for Margins & Padding
+$step1: 0.25rem;
+$step2: 0.5rem;
+$step3: 1rem;
+$step4: 2rem;
+$step5: 4rem;
+$step6: 8rem;
 
 
 // Type System
 body {
   color: $dark-grey;
   font-family: $serif-font;
-  font-size: 16px;
-  font-weight: normal;
-  // font-weight: 300;
+  font-size: $root-size;
+  // font-weight: normal;
+  line-height: $line-height;
+  font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $sans-font;
   color: $blue-shade-2;
+  text-transform: uppercase;
+  line-height: $line-height;
   // font-weight: 400;
   // font-weight: 600;
   // font-weight: 700;
-  font-weight: normal;
-  font-style: normal;
-  letter-spacing: 0.1em;
+  // font-weight: normal;
+  // font-style: normal;
+  // letter-spacing: 0.1em;
   margin-top: 0;
+  margin-bottom: 0;
 
   &.box {
     color: $white;
     background-color: $blue-shade-2;
     display: inline-block;
     padding: 0.8em 1.1em 0.6em;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     // font-weight: 400;
   }
 
-  &.light {
-    color: $white;
-  }
+  // &.light {
+  //   color: $white;
+  // }
+}
+h1, .h1 {
+  font-size: 2rem;
+}
+h2, .h2 {
+  font-size: 1.5rem;
+}
+h3, .h3 {
+  font-size: 1.25rem;
+  // color: $salmon;
+  // font-size: 1.3em;
+  // text-transform: uppercase;
+  // margin-top: 0;
+  // margin-bottom: 0.2rm;
+}
+h4, .h4 {
+  font-size: 1rem;
+}
+h5, .h5 {
+  font-size: 0.875rem;
+}
+h6, .h6 {
+  font-size: 0.75rem;
 }
 
-h2 {
-  font-size: 1em;
-}
-
-h3 {
-  color: $salmon;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0.2em;
-}
-
-p, em {
-  color: $dark-grey;
+// p, em {
+//   color: $dark-grey;
   
-  &.light {
-    color: $white;
-  }  
-}
+//   &.light {
+//     color: $white;
+//   }  
+// }
 
 p {
-  font-family: $serif-font;
-  // font-size: 0.9em;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.5;
+  margin-top: $step3;
+  margin-bottom: $step3;
+  line-height: $line-height;
+  // font-family: $serif-font;
+  // // font-size: 0.9em;
+  // font-size: 1em;
+  // font-weight: 300;
+  // line-height: 1.5;
 
   &.interface {
-    font-size: 0.8em;
+    font-size: 0.875rem;
     font-weight: 400;
+    margin: $step1 0;
   }
 }
 
-em {
-  font-family: $italic-font;
-}
+// em {
+//   font-family: $italic-font;
+// }
 
-a {
-  color: $dark-grey;
-  text-decoration: none;
-}
+// a {
+//   color: $dark-grey;
+//   text-decoration: none;
+// }
 
-.label-1, .label-2 {
-  font-family: $sans-font;
-  color: $dark-grey;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
+// .label-1, .label-2 {
+//   font-family: $sans-font;
+//   color: $dark-grey;
+//   text-transform: uppercase;
+//   letter-spacing: 0.1em;
+// }
 
-.label-1 {
-  display: block;
-  font-size: 0.9em;
-}
+// .label-1 {
+//   display: block;
+//   font-size: 0.9em;
+// }
 
-.label-2 {
-  display: block;
-  font-size: 0.7em;
-  line-height: 1.5;
-  margin-bottom: 0.2em;
-}
+// .label-2 {
+//   display: block;
+//   font-size: 0.7em;
+//   line-height: 1.5;
+//   margin-bottom: 0.2em;
+// }
 
 ul {
   list-style: none;
   padding-left: 0;
 }
 
-.tagline {
-  font-size: 3em;
-  font-weight: 100;
+// .tagline {
+//   font-size: 3em;
+//   font-weight: 100;
 
-  b {
-    font-weight: 300;
-  }
-}
+//   b {
+//     font-weight: 300;
+//   }
+// }
+
+
 
 

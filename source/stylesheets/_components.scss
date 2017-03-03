@@ -1,0 +1,24 @@
+// Menu Items
+ul.drinks {
+  li.drink {
+    max-width: 20rem;
+    // margin-top: 3em;
+    // margin-bottom: 3em;
+
+    .name {
+      // color: $blue-shade-2;
+      // display: block;
+      // font-family: $sans-font;
+      // text-transform: uppercase;
+      // margin-bottom: 0.2em;
+    }
+    .notes {
+      color: $blue;
+    }
+    p.description {
+      // font-size: 0.8em;
+      // margin-top: 0.4em;
+      // margin-bottom: 0.4em;
+    }
+  }
+}

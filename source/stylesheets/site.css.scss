@@ -4,6 +4,8 @@
 @import "neat";
 @import "mixins";
 @import "top-bar";
+@import "components";
+@import "styleguide";
 
 body {
   @include grid-container;
@@ -107,28 +109,6 @@ section.select-drinks {
     p.section-intro {
       margin-bottom: 2em;
     }
-    ul.drinks {
-      li.drink {
-        margin-top: 3em;
-        margin-bottom: 3em;
-
-        .name {
-          color: $blue-shade-2;
-          display: block;
-          font-family: $sans-font;
-          text-transform: uppercase;
-          margin-bottom: 0.2em;
-        }
-        .notes {
-          color: $blue;
-        }
-        p.description {
-          font-size: 0.8em;
-          margin-top: 0.4em;
-          margin-bottom: 0.4em;
-        }
-      }
-    }
   }
   img {
     @include grid-column(7);
@@ -183,4 +163,8 @@ section.select-events {
 
 section.contact {
   @include grid-container;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  text-align: center;
+  background-image: url("/images/tropical-pattern.jpg");
 }
