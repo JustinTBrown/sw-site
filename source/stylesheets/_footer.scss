@@ -1,33 +1,40 @@
 footer {
   // @include grid-container;
-  padding: 0 2em;
   background-color: $dark-grey;
   height: 50px;
-  .logo {
-    @import "logo-horizantal";
-    @include vertical-align(); 
-    display: inline-block;
-    margin-top: $step1;
-  }
-  .contact {
-    @include vertical-align(); 
-    display: inline-block;
-    float: right;
 
-    ul {
-      li {
-        display: inline-block;
-        padding-left: 2em;
-        img {
-          height: 1rem;
-          transform: translateY(20%);
-        }
-        a {
-          color: $white;
+  .footer-container {
+    height: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $step3;
+    
+    .logo {
+      @import "logo-horizantal";
+      @include vertical-align(); 
+      display: inline-block;
+      margin-top: $step1;
+    }
+    .contact {
+      @include vertical-align(); 
+      display: inline-block;
+      float: right;
 
-          // &.instagram:before {
-          //   content: url(/images/ig-icon.png);
-          // }
+      ul {
+        li {
+          display: inline-block;
+          padding-left: 2em;
+          img {
+            height: 1rem;
+            transform: translateY(20%);
+          }
+          a {
+            color: $white;
+
+            // &.instagram:before {
+            //   content: url(/images/ig-icon.png);
+            // }
+          }
         }
       }
     }

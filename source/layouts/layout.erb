@@ -10,11 +10,20 @@
     <title><%= current_page.data.title || "Sugar Water" %></title>
 
     <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "vendor/responsive-nav" %>
     <%= javascript_include_tag "site" %>
+    <%= javascript_include_tag "responsive-nav" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <%= partial "layouts/top-bar" %>
+    <div class="main">
+      <%= yield %>
+    </div>
+    <%= partial "layouts/footer" %>
+    <script>
+        var nav = responsiveNav(".nav-collapse");
+    </script>
   </body>
 
 </html>
