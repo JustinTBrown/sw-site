@@ -64,18 +64,26 @@ title: Sugar Water
     </div>
     <p class="section-intro">We’re always playing and experimenting. Here’s some recent additions to our family of original drinks.</p>
     <ul class="drinks">
-      <li class="drink">
+      <% dato.drinks.each do |drink| %>
+        <li class="drink">
+          <p class="name h3"><%= drink.name %></p>
+          <p class="notes h6"><%= drink.short_description %></p>
+          <p class="description interface"><%= drink.ingredients %></p>
+          <p class="alcohol-volume h6"><%= drink.ounces %> oz</p>        
+        </li>
+      <% end %>
+<!--       <li class="drink">
         <p class="name h3">Golden Kumaru</p>
         <p class="notes h6">Daiquiri, Touch of Almond and Umami</p>
         <p class="description interface">plantation 3 star rum, lime, tonka bean syrup, cured lemon, bitters, thyme</p>
         <p class="alcohol-volume h6">2 oz</p>        
-      </li>
-      <li class="drink">
+      </li> -->
+<!--       <li class="drink">
         <p class="name h3">Port Cup</p>
         <p class="notes h6">Szechuan spice, smoky orange,  bourbon</p>
         <p class="description interface">plantation 3 star rum, lime, tonka bean syrup, cured lemon, bitters, thyme</p>
         <p class="alcohol-volume h6">2 oz</p>        
-      </li>
+      </li> -->
     </ul>
     <a class="standalone h5" href="#">Check out our menu</a>
   </div>
