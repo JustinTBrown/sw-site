@@ -1,14 +1,14 @@
 footer {
   // @include grid-container;
   background-color: $dark-grey;
-  height: 50px;
+  height: 65px;
 
   .footer-container {
     height: 100%;
     max-width: $container-width;
     margin: 0 auto;
     padding: 0 $step3;
-    
+
     .logo {
       @import "logo-horizantal";
       @include vertical-align(); 
