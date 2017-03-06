@@ -8,8 +8,7 @@ title: Sugar Water
   </span>
   <img class="image" src="images/Grapefruit-bittersweet-large.png" alt="">
 </section>
-<!-- <div class="border"></div> -->
-<!-- <hr class="style-two"> -->
+
 <hr>
 
 <section class="what">
@@ -73,18 +72,6 @@ title: Sugar Water
           <p class="alcohol-volume h6"><%= drink.ounces %> oz</p>        
         </li>
       <% end %>
-<!--       <li class="drink">
-        <p class="name h3">Golden Kumaru</p>
-        <p class="notes h6">Daiquiri, Touch of Almond and Umami</p>
-        <p class="description interface">plantation 3 star rum, lime, tonka bean syrup, cured lemon, bitters, thyme</p>
-        <p class="alcohol-volume h6">2 oz</p>        
-      </li> -->
-<!--       <li class="drink">
-        <p class="name h3">Port Cup</p>
-        <p class="notes h6">Szechuan spice, smoky orange,  bourbon</p>
-        <p class="description interface">plantation 3 star rum, lime, tonka bean syrup, cured lemon, bitters, thyme</p>
-        <p class="alcohol-volume h6">2 oz</p>        
-      </li> -->
     </ul>
     <a class="standalone h5" href="#">Check out our menu</a>
   </div>
@@ -98,32 +85,20 @@ title: Sugar Water
     <h2 class="box h4">Events</h2>
   </div>
   <ul class="events">
-    <li class="event">
-      <p class="date h5">Friday, February 3</p>
-      <p class="name h3">Market Collective</p>
-      <p class="location h6">Chinese Cultural Centre</p>
-      <p class="time h6">5pm - 9pm</p>
-      <p class="description interface">Ut nec fringilla lorem. Sed vitae quam purus. Integer id augue vitae purus finibus vulputate. Curabitur nisl lorem, tincidunt at tortor non.</p>
-    </li>
-    <li class="event">
-      <p class="date h5">Saturday, February 25</p>
-      <p class="name h3">Good Neighbours</p>
-      <p class="location h6">Phil & Sebastian in Mission</p>
-      <p class="time h6">7pm - 11pm</p>
-      <p class="description interface">Ut nec fringilla lorem. Sed vitae quam purus. Integer id augue vitae purus finibus vulputate. Curabitur nisl lorem, tincidunt at tortor non.</p>
-    </li>
-    <li class="event">
-      <p class="date h5">Friday, February 3</p>
-      <p class="name h3">Market Collective</p>
-      <p class="location h6">Chinese Cultural Centre</p>
-      <p class="time h6">5pm - 9pm</p>
-      <p class="description interface">Ut nec fringilla lorem. Sed vitae quam purus. Integer id augue vitae purus finibus vulputate. Curabitur nisl lorem, tincidunt at tortor non.</p>
-    </li>
+    <%= Time.zone.to_s %>
+    <p> <%= DateTime.now %> </p>
+    <% dato.events.each do |event| %>
+      <li class="event">
+        <p class="date h5"> <%= event.start_date_time.strftime("%A, %B %e") %> </p>
+        <p class="name h3"> <%= event.name %></p>
+        <p class="location h6"><a href=" <%= event.map_link %> "> <%= event.location %> </a></p>
+        <p class="time h6"> <%= event.start_date_time.localtime.strftime("%l%P") %> - <%= event.end_date_time.localtime.strftime("%l%P") %> </p>
+        <p class="description interface"> <%= event.short_description %> </p>
+      </li>
+    <% end %>
   </ul>
   <a class="standalone h5" href="#">All our upcoming events</a>
 </section>
-
-<!-- <hr> -->
 
 <section class="contact">
   <div class="heading-box">

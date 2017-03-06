@@ -41,7 +41,7 @@
       margin-top: $step1;
     }
 
-    nav.nav-collapse {
+    .nav-collapse {
       @include vertical-align(); 
       // height: 100%;
       float: right;
@@ -63,10 +63,22 @@
           }
         }
       }
+      &.opened {
+        position: fixed;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        clip: unset
+      }
     }
 
     a.nav-toggle {
-      @include vertical-align(); 
+      @include vertical-align();
+      color: $salmon;
+      font-family: $sans-font;
+      text-transform: uppercase;
+      font-size: 0.875rem;
       float: right;
     }
     

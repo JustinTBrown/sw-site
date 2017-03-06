@@ -23,6 +23,7 @@ configure :development do
   activate :livereload
 end
 
+Time.zone = "MST"
 ###
 # Helpers
 ###
