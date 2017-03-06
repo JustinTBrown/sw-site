@@ -43,18 +43,18 @@ configure :build do
   # activate :minify_javascript
 end
 
-# Contentful Config
-activate :contentful do |f|
-  f.space         = { website: '1oj2xa3ditq8' }
-  # f.space         = '1oj2xa3ditq8'
-  f.access_token  = '56bba8df98d887a655af77c73c4cc5c6bbde5d010d0c3741917224f39f0a1900'
-  # f.cda_query     = { limit: 1000 }
-  # f.cda_query     = { content_type: 'content-type-id', include: 1 }
-  # f.cda_query     = { drink: 'drink-id', include: 1 }
-  # f.content_types = { partner: 'content-type-id'}
-  # f.content_types = { drink: 'drink-id'}
-  f.content_types = { drink: 'drink'}
-end
+# # Contentful Config
+# activate :contentful do |f|
+#   f.space         = { website: '1oj2xa3ditq8' }
+#   # f.space         = '1oj2xa3ditq8'
+#   f.access_token  = '56bba8df98d887a655af77c73c4cc5c6bbde5d010d0c3741917224f39f0a1900'
+#   # f.cda_query     = { limit: 1000 }
+#   # f.cda_query     = { content_type: 'content-type-id', include: 1 }
+#   # f.cda_query     = { drink: 'drink-id', include: 1 }
+#   # f.content_types = { partner: 'content-type-id'}
+#   # f.content_types = { drink: 'drink-id'}
+#   f.content_types = { drink: 'drink'}
+# end
 
 # Data Config
 activate :dato
