@@ -85,11 +85,9 @@ title: Sugar Water
     <h2 class="box h4">Events</h2>
   </div>
   <ul class="events">
-    <%= Time.zone.to_s %>
-    <p> <%= DateTime.now %> </p>
-    <% dato.events.each do |event| %>
+    <% dato.events.sort_by{|event| event.start_date_time }.first(3).each do |event| %>
       <li class="event">
-        <p class="date h5"> <%= event.start_date_time.strftime("%A, %B %e") %> </p>
+        <p class="date h5"> <%= event.start_date_time.localtime.strftime("%A, %B %e") %> </p>
         <p class="name h3"> <%= event.name %></p>
         <p class="location h6"><a href=" <%= event.map_link %> "> <%= event.location %> </a></p>
         <p class="time h6"> <%= event.start_date_time.localtime.strftime("%l%P") %> - <%= event.end_date_time.localtime.strftime("%l%P") %> </p>
