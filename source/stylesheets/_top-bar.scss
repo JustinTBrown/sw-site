@@ -6,8 +6,8 @@
   // @include waves-background;
   // background-color: transparent;
   background-color: $white;
-  transition: background-color 0.25s;
-  transition: height 0.25s;
+  transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, border-bottom 0.1s ease;
+  // transition: height 0.25s;
   top: 0;
   left: 0;
   position: fixed;
@@ -20,6 +20,8 @@
 
   .top-bar-inner-container {
     // background-color: $white-tint-super-light;
+    // background-color: $white-tint-super-light-2;
+    // background-color: $white-tint-1;
     height: 100%;
     // @include grid-container;
     max-width: $container-width;
