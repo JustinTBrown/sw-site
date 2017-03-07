@@ -1,12 +1,14 @@
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
 @import "variables";
 @import "colour";
 @import "typography";
-@import "neat";
+@import "grid";
 @import "mixins";
 @import "top-bar";
 @import "components";
 @import "footer";
-@import "styleguide";
+// @import "styleguide";
 
 // html, body {
 //   height: 100%;
@@ -21,7 +23,7 @@ body {
   margin: 0;
 
   .main {
-    @include grid-container;
+    // @include grid-container;
   }
 }
 hr {
@@ -34,15 +36,21 @@ hr {
 }
 
 section.intro {
-  @include width-container;
+  // @include width-container;
   // @include border-bottom();
+  @include outer-container();
   padding-top: 20px;
   margin-top: $top-bar-height;
   position: relative;
   height: 500px;
 
+  // .tagline-container {
+  //   position: relative;
+  // }
+
   .tagline {
     @include vertical-align();
+    position: absolute;
     width: 52%;
     display: inline-block;
     z-index: 1;
@@ -54,35 +62,35 @@ section.intro {
     display: inline-block;
     position: absolute;
     right: 5em;
-    // z-index: -1;
+    z-index: -1;
   }
 }
 
 section.what {
   // @include waves-background;
-  @include width-container;
-  @include grid-container;
+  // @include width-container;
+  // @include grid-container;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .heading-box {
     text-align: center;
   }
   ul {
-    @include grid-container;
+    // @include grid-container;
     // @include grid-column(10);
     // @include grid-push(1);
 
     li {
-      @include grid-container;
+      // @include grid-container;
       margin-bottom: 50px;
       &:first-of-type {
         margin-top: 50px;
       }
       img {
-        @include grid-column(6);
+        // @include grid-column(6);
       }
       .text {
-        @include grid-column(6);
+        // @include grid-column(6);
         h3 {
           color: $salmon;
         }
@@ -93,31 +101,31 @@ section.what {
     }
   }
   .standalone {
-    @include grid-container;
-    @include grid-column(12);
+    // @include grid-container;
+    // @include grid-column(12);
     text-align: center;
   }
   // @include border-bottom();
 }
 
 section.select-drinks {
-  @include width-container;
-  @include grid-container;
+  // @include width-container;
+  // @include grid-container;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .text {
-    @include grid-column(4);
+    // @include grid-column(4);
   }
   img {
-    @include grid-column(7);
-    @include grid-push(1);
+    // @include grid-column(7);
+    // @include grid-push(1);
   }
   // @include border-bottom();
 }
 
 section.select-events {
-  @include width-container;
-  @include grid-container;
+  // @include width-container;
+  // @include grid-container;
   // @include grid-visual;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
@@ -127,8 +135,8 @@ section.select-events {
   }
   
   .standalone {
-    @include grid-container;
-    @include grid-column(12);
+    // @include grid-container;
+    // @include grid-column(12);
     // color: $salmon;
     text-align: center;
   }
@@ -137,8 +145,8 @@ section.select-events {
 
 section.contact {
   // @include width-container;
-  @include grid-container;
-  @include grid-visual;
+  // @include grid-container;
+  // @include grid-visual;
   // @include grid-column(10);
   // @include grid-push(1);
   padding-top: 0;
@@ -155,7 +163,7 @@ section.contact {
     // padding: 0 2em;
   }
   .info, .details {
-    @include grid-column(6);
+    // @include grid-column(6);
     height: 200px;
   }
   .info {

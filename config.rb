@@ -24,6 +24,11 @@ configure :development do
 end
 
 Time.zone = "MST"
+
+activate :directory_indexes
+
+# add_import_path "node_modules/foundation-sites/scss"
+
 ###
 # Helpers
 ###
@@ -59,3 +64,15 @@ end
 
 # Data Config
 activate :dato
+
+# dato.tap do |dato|
+#   @page_title = dato.homepage.page_title
+#   return @page_title
+#   # # iterate over the "Blog post" records...
+#   # dato.blog_posts.each do |article|
+
+#   #   # ...and create a page for each article starting from a template!
+#   #   proxy "/articles/#{article.slug}.html", "/templates/article.html", locals: { article: article }
+
+#   # end
+# end

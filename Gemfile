@@ -13,7 +13,9 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-livereload', '~> 3.4'
 
 ## Other Gems
-gem 'neat'
+gem 'bourbon'
+# gem 'neat', '~> 1.8.1'
+gem 'neat', '~> 1.8'
 gem 'middleman-autoprefixer'
 # gem 'contentful_middleman', :git => "git://github.com/contentful/contentful_middleman.git", :branch => "dl/upgrade-to-v4"
 gem 'middleman-dato'

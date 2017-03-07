@@ -1,0 +1,23 @@
+{
+  "name": "sw-site",
+  "version": "1.0.0",
+  "description": "Middleman Sass ERB Bourbon Neat",
+  "main": "index.js",
+  "dependencies": {
+    "foundation-sites": "^6.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinTBrown/sw-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinTBrown/sw-site/issues"
+  },
+  "homepage": "https://github.com/JustinTBrown/sw-site#readme"
+}

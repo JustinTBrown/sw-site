@@ -1,0 +1,21 @@
+// $neat-grid: (
+//   columns: 12,
+//   gutter: 20px,
+// );
+
+// $medium-grid: (
+//   columns: 12,
+//   gutter: 20px,
+//   media: 768px
+// );
+
+// @mixin width-container {
+//   max-width: $container-width;
+//   margin: 0 auto;
+
+//   @include grid-media($medium-grid) {
+//     max-width: 768px;
+//   }
+// }
+
+$max-width: 960px;

@@ -1,6 +1,6 @@
 // Menu Items
 ul.drinks {
-  @include grid-container;
+  // @include grid-container;
   padding-top: $step4;
 
   li.drink {
@@ -22,12 +22,12 @@ ul.drinks {
 
 // Events
 ul.events {
-  @include grid-container;
+  // @include grid-container;
   // text-align: left;
   padding-top: $step4;
 
   li.event {
-    @include grid-column(4);
+    // @include grid-column(4);
     max-width: 20rem;
     margin-top: $step4;
     margin-bottom: $step4;

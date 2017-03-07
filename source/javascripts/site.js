@@ -23,49 +23,57 @@
 
 $(window).scroll(function() {
   var viewableOffset = $("html").offset().top - $(window).scrollTop();
-  var topBar = $('#top-bar-container');
-  // var topBarHr = $('#top-bar-hr');
+  var nav = $('.navigation');
+  var navWrap = $('.navigation-wrapper ');
+  // var navWrapHr = $('#top-bar-hr');
   console.log(viewableOffset);
   if (viewableOffset < -70) {
-    var styles = {
+    var navStyles = {
         // backgroundColor: '#fbf9f1',
         backgroundColor: '#fffefd',
-        height: '80',
-        borderBottom: 'none'
+        // borderBottom: 'none'
+        // height: '80',
         // borderBottom: 'solid 1px rgba(0,0,0,0.1)'
+    };
+    var navWrapStyles = {
+      borderBottom: 'none'
     };
     // var hrStyles = {
     //   borderTop: 'none',
     //   borderBottom: 'none'
     // };
   } else {
-    var styles = {
-        backgroundColor: '#F7F2E1',
-        height: '120',
+    var navStyles = {
+      backgroundColor: '#F7F2E1',
+      // borderBottom: 'solid 1px rgba(0,0,0,0.2)'
+        // height: '120',
         // borderBottom: 'none'
-        borderBottom: 'solid 1px rgba(0,0,0,0.2)'
+    };
+    var navWrapStyles = {
+      borderBottom: 'solid 1px rgba(0,0,0,0.2)'
+      // borderBottom: 'none'
     };
     // var hrStyles = {
     //   borderTop: '1px solid rgba(0, 0, 0, 0.2)',
     //   borderBottom: '1px solid rgba(255, 255, 255, 0.3)'
     // };
   };
-  topBar.css( styles );
+  nav.css( navStyles );
+  navWrap.css( navWrapStyles );
   // topBarHr.css( hrStyles );
 });
 
-var nav = responsiveNav(".nav-collapse", { // Selector
-  animate: true, // Boolean: Use CSS3 transitions, true or false
-  transition: 284, // Integer: Speed of the transition, in milliseconds
-  label: "Menu", // String: Label for the navigation toggle
-  insert: "before", // String: Insert the toggle before or after the navigation
-  customToggle: "", // Selector: Specify the ID of a custom toggle
-  closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
-  openPos: "static", // String: Position of the opened nav, relative or static
-  navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
-  navActiveClass: "js-nav-active", // String: Class that is added to  element when nav is active
-  jsClass: "js", // String: 'JS enabled' class which is added to  element
-  init: function(){}, // Function: Init callback
-  open: function(){}, // Function: Open callback
-  close: function(){} // Function: Close callback
+$(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+        // $('#js-navigation-menu').addClass("mobile-menu");
+      }
+    });
+  });
 });
