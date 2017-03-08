@@ -55,7 +55,7 @@ title: Sugar Water
     </li>
   </ul>
   <div class="section-end">
-    <a class="standalone h5" href="#">More on Our Services</a>
+    <a class="standalone h5" href="/services">More on Our Services</a>
   </div>
 </section>
 
@@ -79,7 +79,7 @@ title: Sugar Water
       <% end %>
     </ul>
     <div class="section-end">
-      <a class="standalone h5" href="#">Check out our menu</a>
+      <a class="standalone h5" href="/menu">Check out our menu</a>
     </div>
   </div>
   <img src="images/kyo-pouring-grenadine.jpg" alt="">
@@ -96,14 +96,14 @@ title: Sugar Water
       <li class="event">
         <p class="date h5"> <%= event.start_date_time.localtime.strftime("%A, %B %e") %> </p>
         <p class="name h3"> <%= event.name %></p>
-        <p class="location h6"><a href=" <%= event.map_link %> "> <%= event.location %> </a></p>
+        <p class="location h6"><a href=" <%= event.map_link %> " target="_blank"> <%= event.location %> </a></p>
         <p class="time h6"> <%= event.start_date_time.localtime.strftime("%l%P") %> - <%= event.end_date_time.localtime.strftime("%l%P") %> </p>
         <p class="description interface"> <%= event.short_description %> </p>
       </li>
     <% end %>
   </ul>
   <div class="section-end">
-    <a class="standalone h5" href="#">All our upcoming events</a>
+    <a class="standalone h5" href="/events">All our upcoming events</a>
   </div>
 </section>
 

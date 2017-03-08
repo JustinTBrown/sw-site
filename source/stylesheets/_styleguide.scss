@@ -1,4 +1,5 @@
 .styleguide-container {
+  @include pad();
   // @include width-container;
   // @include grid-container;
   // @include grid-column(12);
@@ -8,7 +9,7 @@
 
 
   h1.title {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     // padding-top: 50px;
     margin-top: 60px;
@@ -36,35 +37,88 @@
   }
 
   section.typography {
-    @include grid-container;
-    // @include grid-collapse;
+    @include outer-container();
+    @include pad();
 
     .regular-headings, .box-headings {
-      @include grid-column(4);
+      // @include span-columns(4);
     }
     .regular-headings {
-      @include grid-push(1);
+      // @include shift(1);
+      @include row();
     }
     .box-headings {
-      @include grid-push(2);
+      // @include shift(2);
+      @include row();
     }
     .copy {
-      @include grid-container;
-      @include grid-column(6);
-      @include grid-push(3);
+      @include row();
+      // @include span-columns(6);
+      // @include shift(3);
     }
     .other-copy {
-      @include grid-container;
-      @include grid-column(12);
+      @include row();
+      // @include span-columns(12);
+    }
+    @include media ($medium-screen) {
+      .regular-headings, .box-headings {
+        // @include span-columns(4);
+      }
+      .regular-headings {
+        @include row();
+        @include span-columns(8);
+        @include shift(2);
+      }
+      .box-headings {
+        @include row();
+        @include span-columns(8);
+        @include shift(2);
+      }
+      .copy {
+        @include row();
+        @include span-columns(8);
+        @include shift(2);
+      }
+      .other-copy {
+        @include row();
+        @include span-columns(8);
+        @include shift(2);
+      }
+    }
+    @include media ($large-screen) {
+      .regular-headings, .box-headings {
+        @include span-columns(4);
+      }
+      .regular-headings {
+        @include shift(1);
+      }
+      .box-headings {
+        @include shift(2);
+      }
+      .copy {
+        @include row();
+        @include span-columns(6);
+        @include shift(3);
+      }
+      .other-copy {
+        @include span-columns(12);
+      }
     }
   }
 
   section.colours {
+    @include outer-container();
+    @include pad();
     ul.palette {
-      @include grid-container;
+      @include row();
 
       li.colour {
-        @include grid-column(3);
+        // @include span-columns(6);
+        // &:nth-of-type(2) {
+        //   margin-right: 0;
+        // }
+        // @include block-grid(6);
+        @include grid-item-columns(6);
 
         .swatch {
           height: 100px;
@@ -90,14 +144,43 @@
             background-color: $blue;
           }
         }
+        @include media($medium-screen) {
+          // @include block-grid(4);
+          // @include grid-item-columns(4);
+        }
+        @include media ($large-screen) {
+          @include grid-item-columns(3);
+        }
       }
-      
     }
   }
 
   section.components {
-    li.drink {
-      @include grid-column(4);
+    @include outer-container();
+    @include pad();
+
+    ul.drinks {
+      
+      li.drink {
+        @include media ($medium-screen) {
+          @include grid-item-columns(6);
+        }
+        @include media ($large-screen) {
+          @include grid-item-columns(4);
+        }
+      }
+    }
+
+    ul.events {
+
+      li.event {
+        @include media ($medium-screen) {
+          @include grid-item-columns(6);
+        }
+        @include media ($large-screen) {
+          @include grid-item-columns(4);
+        }
+      }
     }
   }
 }

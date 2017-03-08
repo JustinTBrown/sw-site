@@ -11,6 +11,7 @@ ul.drinks {
     margin-bottom: $step4;
     margin-left: auto;
     margin-right: auto;
+
     p.name {
 
     }
@@ -19,6 +20,15 @@ ul.drinks {
     }
     p.description {
 
+    }
+  }
+  @include media ($medium-screen) {
+    li.drink {
+      // display: inline-block;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      // padding-left: 2rem;
     }
   }
 }
@@ -58,6 +68,15 @@ ul.events {
     .description {
       margin-top: $step3;
 
+    }
+  }
+  @include media ($medium-screen) {
+    li.event {
+      // display: inline-block;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      // padding-left: 2rem;
     }
   }
 }
