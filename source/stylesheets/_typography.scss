@@ -177,12 +177,17 @@ blockquote.pullquote {
 }
 
 .tagline {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 100;
   line-height: 1.25;
 
   strong {
     font-weight: 300;
+  }
+
+  @include media ($medium-screen) {
+    font-size: 3em;
+
   }
 }
 

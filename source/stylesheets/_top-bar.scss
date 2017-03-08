@@ -1,10 +1,6 @@
 .navigation {
-  // @include border-bottom();
   background-color: $white;
-  // $large-screen: 50em !default;
-  // $medium-screen: 30em !default;
   position: fixed;
-  // width: 100%;
   width: 100vw;
   top: 0;
   z-index: 9900;
@@ -12,6 +8,7 @@
 
   // Mobile view
   .navigation-menu-button {
+    color: $dark-grey-tint-1;
     display: block;
     float: right;
     margin: 0;
@@ -26,15 +23,13 @@
   .navigation-wrapper {
     @include clearfix;
     @include outer-container();
+    @include pad();
     @include border-bottom();
     position: relative;
-    // margin: $step2 $step3;
-    padding: $step3 $step3;
+    padding: $step3 $step4 $step3 $step3;
     transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, border-bottom 0.1s ease;
 
     @include media ($medium-screen) {
-      // height: 100px;
-      // margin: 0;
       padding: $step4 0 0 0;
     }
 
@@ -45,23 +40,19 @@
   }
 
   .logo {
-    // @include vertical-align(); 
     @import "logo";
     float: left;
-    // margin: $step3 0;
     margin-top: $step1;
 
     @include media ($medium-screen) {
       float: none;
       text-align: center;
       display: block;
-      // margin-top: $step4;
     }
 
     @include media ($large-screen) {
       @include vertical-align(); 
       float: left;
-      // margin-top: 0;
       margin-top: $step1;
     }
 
@@ -72,15 +63,10 @@
   }
 
   nav {
-    // @include vertical-align(); 
     float: none;
 
     @include media ($medium-screen) {
-      // @include vertical-align(); 
-      // float: left;
       text-align: center;
-      // line-height: 1.5em;
-      // padding-top: 0.3em;
       margin-top: $step3;
       margin-bottom: $step3;
     }
@@ -98,7 +84,6 @@
     display: none;
     margin: 0 auto;
     overflow: visible;
-    // padding: 0;
     padding-bottom: $step4;
     width: 100%;
 
@@ -113,14 +98,9 @@
     }
   }
 
-  // .mobile-menu > li.nav-link {
-  //   text-align: center;
-  // }
-
   // Nav items
   ul li.nav-link {
     display: block;
-    // text-align: right;
     text-align: center;
     width: 100%;
 
@@ -155,95 +135,5 @@
       padding-right: 0em;
       padding-left: 2em;
     }
-  }
-}
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#top-bar-container {
-  // @include waves-background;
-  // background-color: transparent;
-  background-color: $white;
-  transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, border-bottom 0.1s ease;
-  // transition: height 0.25s;
-  top: 0;
-  left: 0;
-  position: fixed;
-  height: $top-bar-height;
-  // width: $container-width;
-  width: 100%;
-  @include border-bottom();
-
-  // @include grid-media($medium-grid) {
-  //   max-width: 768px;
-  // };
-
-  // @include width-container;
-
-  z-index: 99;
-
-  .top-bar-inner-container {
-    // background-color: $white-tint-super-light;
-    // background-color: $white-tint-super-light-2;
-    // background-color: $white-tint-1;
-    height: 100%;
-    // @include grid-container;
-    max-width: $container-width;
-    margin: 0 auto;
-    padding: 0 $step3;
-    // background-color: #000;
-  }
-
-  .top-bar {
-    height: 100%;
-    position: relative;
-
-    .logo {
-      @import "logo";
-      @include vertical-align(); 
-      display: inline-block;
-      margin-top: $step1;
-    }
-
-    .nav-collapse {
-      @include vertical-align(); 
-      // height: 100%;
-      float: right;
-
-      ul {
-        // float: right;
-
-        li {
-          display: inline-block;
-          padding-left: 2em;
-          width: auto;
-
-          a {
-            color: $salmon;
-
-            &:hover {
-              color: $blue-shade-2;
-            }
-          }
-        }
-      }
-      &.opened {
-        position: fixed;
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        clip: unset
-      }
-    }
-
-    a.nav-toggle {
-      @include vertical-align();
-      color: $salmon;
-      font-family: $sans-font;
-      text-transform: uppercase;
-      font-size: 0.875rem;
-      float: right;
-    }
-    
   }
 }

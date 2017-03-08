@@ -2,8 +2,8 @@
 @import "vendor/neat/neat";
 @import "variables";
 @import "colour";
-@import "typography";
 @import "grid";
+@import "typography";
 @import "mixins";
 @import "top-bar";
 @import "components";
@@ -23,28 +23,55 @@ hr {
 }
 
 section.intro {
-  @include outer-container();
-  @include pad();
-  padding-top: 20px;
+  @include pad(1rem);
+  // padding-top: 20px;
   margin-top: $top-bar-height;
   position: relative;
-  height: 500px;
+  height: 300px;
 
   .tagline {
     @include vertical-align();
-    position: absolute;
-    width: 52%;
+    width: 90%;
     display: inline-block;
     z-index: 1;
+    margin: 0;
   }
 
   .image {
     @include vertical-align();
+    top: 60%;
     width: 40%;
     display: inline-block;
     position: absolute;
-    right: 5em;
+    right: 0.5em;
     z-index: -1;
+  }
+
+  @include media ($medium-screen) {
+    @include outer-container();
+    height: 500px;
+
+    .tagline {
+    position: absolute;
+      width: 70%;
+    }
+    .image {
+      top: 50%;
+      width: 40%;
+      right: 3em;
+    }
+  }
+  @include media ($large-screen) {
+    height: 500px;
+
+    .tagline {
+      width: 52%;
+    }
+    .image {
+      top: 50%;
+      width: 40%;
+      right: 5em;
+    }
   }
 }
 
@@ -88,13 +115,11 @@ section.what {
       li {
         img {
           @include span-columns(5);
-          // @include shift(0);
           margin-bottom: 0;
         }
         .text {
           @include span-columns(7);
         }
-        
       }
     }
   }
@@ -108,7 +133,6 @@ section.what {
         .text {
           @include span-columns(6);
         }
-        
       }
     }
   }
@@ -120,18 +144,17 @@ section.select-drinks {
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .text {
-    // @include span-columns(12);
     ul.drinks {
       li.drink {
-        margin-left: auto;
-        margin-right: auto;
       }
     }
   }
   img {
     @include span-columns(12);
-    // @include shift(1);
-    margin-top: $step4;
+    margin-top: $step5;
+  }
+  .section-end {
+    text-align: center;
   }
 
   @include media ($medium-screen) {
@@ -143,6 +166,9 @@ section.select-drinks {
       @include span-columns(5);
       @include shift(1);
       margin-top: 0;
+    }
+    .section-end {
+      text-align: left;
     }
   }
 
@@ -163,6 +189,7 @@ section.select-events {
   @include pad();
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+  margin-bottom: $step5;
   
   .heading-box {
     text-align: center;
@@ -170,14 +197,10 @@ section.select-events {
 
   ul.events {
     @include row();
+    li.event {
+    }
   }
 
-  li.event {
-    // @include span-columns(12);
-    margin-left: auto;
-    margin-right: auto;
-    
-  }
   .section-end {
     text-align: center;
   }
@@ -189,8 +212,7 @@ section.select-events {
 
     li.event {
       @include span-columns(6);
-      @include pad();
-      
+      @include pad();      
     }
   }
 
@@ -200,15 +222,12 @@ section.select-events {
     }
 
     li.event {
-      @include span-columns(4);
-      
+      @include span-columns(4);      
     }
   }
 }
 
 section.contact {
-  @include row();
-  @include pad();
   padding-top: 0;
   padding-bottom: $section-padding;
   text-align: center;
@@ -222,20 +241,15 @@ section.contact {
     max-width: 18em;
   }
   .info, .details {
-    @include span-columns(12);
-    height: auto;
   }
   .info {
     margin-bottom: 2rem;
     margin-top: 1rem;
     text-align: center;
     a.standalone {
-      // @include remove-vertical-align();
       margin: 0;
 
       &:hover {
-        // color: $blue-shade-1;
-        // color: $blue-shade-2;
         color: $dark-grey-shade-1;
       }
     }   
@@ -246,7 +260,6 @@ section.contact {
     p {
       margin: 0;
       margin: 0 auto;
-      // @include remove-vertical-align();
     }
   }
 
@@ -255,15 +268,13 @@ section.contact {
       color: $white;
     }
     .info, .details {
-      @include span-columns(12);
       height: auto;
     }
     .info {
       margin-bottom: 2rem;
-      margin-top: 1rem;
+      margin-top: 2rem;
       text-align: center;
       a.standalone {
-        @include remove-vertical-align();
         margin: 0;
       }   
     }
@@ -273,12 +284,12 @@ section.contact {
       p {
         margin: 0;
         margin: 0 auto;
-        @include remove-vertical-align();
       }
     }
   }
 
   @include media ($large-screen) {
+    @include row();
     a.standalone, p {
       color: $white;
       max-width: 18em;
@@ -288,9 +299,8 @@ section.contact {
       height: 200px;
     }
     .info {
-      // float: right;
       text-align: right;
-      margin: 0;
+      margin: $step4 $step4 0 inherit;
       position: relative;
       a.standalone {
         @include vertical-align();
@@ -298,9 +308,9 @@ section.contact {
         margin-right: 1em;
         float: right;
       }
-      
     }
     .details {
+      margin-top: $step4;
       text-align: left;
       p {
         @include vertical-align();

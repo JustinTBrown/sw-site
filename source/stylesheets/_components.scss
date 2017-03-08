@@ -2,12 +2,15 @@
 ul.drinks {
   // @include grid-container;
   padding-top: $step4;
+  padding-bottom: $step3;
 
   li.drink {
     // @include grid-column(4); // Add column contstraint to component instance
     max-width: 20rem;
     margin-top: $step3;
     margin-bottom: $step4;
+    margin-left: auto;
+    margin-right: auto;
     p.name {
 
     }
@@ -25,12 +28,15 @@ ul.events {
   // @include grid-container;
   // text-align: left;
   padding-top: $step4;
+  padding-bottom: $step3;
 
   li.event {
     // @include grid-column(4);
     max-width: 20rem;
     margin-top: $step4;
     margin-bottom: $step4;
+    margin-left: auto;
+    margin-right: auto;
     // // @include grid-container;
     // // padding: 0 10px;
     // padding: 50px 0 50px;
