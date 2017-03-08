@@ -10,21 +10,9 @@
 @import "footer";
 // @import "styleguide";
 
-// html, body {
-//   height: 100%;
-// }
-
-html {
-  // background-color: $dark-grey;
-}
-
 body {
   background-color: $white;
   margin: 0;
-
-  .main {
-    // @include grid-container;
-  }
 }
 hr {
   border: 0;
@@ -32,21 +20,15 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin: 0 2rem;
-  // transition: border-top 0.25s ease-in-out, border-bottom 0.25s ease-in-out;
 }
 
 section.intro {
-  // @include width-container;
-  // @include border-bottom();
   @include outer-container();
+  @include pad();
   padding-top: 20px;
   margin-top: $top-bar-height;
   position: relative;
   height: 500px;
-
-  // .tagline-container {
-  //   position: relative;
-  // }
 
   .tagline {
     @include vertical-align();
@@ -67,38 +49,27 @@ section.intro {
 }
 
 section.what {
-  // @include waves-background;
-  // @include width-container;
-  // @include grid-container;
   @include outer-container();
+  @include pad();
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .heading-box {
     text-align: center;
   }
   ul {
-    // @include grid-container;
-    // @include grid-column(10);
-    // @include grid-push(1);
-    // @include row();
-
     li {
       @include row();
-      // @include columns(12);
-      // @include grid-container;
       margin-bottom: 50px;
       &:first-of-type {
         margin-top: 50px;
       }
       img {
-        @include span-columns(6);
-        // @include span-columns(6 of 12);
-        // @include grid-column(6);
+        @include span-columns(12);
+        // @include shift(12);
+        margin-bottom: $step4;
       }
       .text {
-        @include span-columns(6);
-        // @include span-columns(6 of 12);
-        // @include grid-column(6);
+        @include span-columns(12);
         h3 {
           color: $salmon;
         }
@@ -111,32 +82,85 @@ section.what {
   .section-end {
     text-align: center;
   }
+
+  @include media ($medium-screen) {
+    ul.block-list {
+      li {
+        img {
+          @include span-columns(5);
+          // @include shift(0);
+          margin-bottom: 0;
+        }
+        .text {
+          @include span-columns(7);
+        }
+        
+      }
+    }
+  }
+
+  @include media ($large-screen) {
+    ul.block-list {
+      li {
+        img {
+          @include span-columns(6);
+        }
+        .text {
+          @include span-columns(6);
+        }
+        
+      }
+    }
+  }
 }
 
 section.select-drinks {
   @include outer-container();
-  // @include width-container;
-  // @include grid-container;
+  @include pad();
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .text {
-    // @include grid-column(4);
-    @include span-columns(4);
+    // @include span-columns(12);
+    ul.drinks {
+      li.drink {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
   img {
-    @include span-columns(7);
-    @include shift(1);
-    // @include grid-column(7);
-    // @include grid-push(1);
+    @include span-columns(12);
+    // @include shift(1);
+    margin-top: $step4;
   }
-  // @include border-bottom();
+
+  @include media ($medium-screen) {
+    .text {
+      @include span-columns(6);
+      
+    }
+    img {
+      @include span-columns(5);
+      @include shift(1);
+      margin-top: 0;
+    }
+  }
+
+  @include media ($large-screen) {
+    .text {
+      @include span-columns(4);
+      
+    }
+    img {
+      @include span-columns(7);
+      @include shift(1);
+    }
+  }
 }
 
 section.select-events {
   @include outer-container();
-  // @include width-container;
-  // @include grid-container;
-  // @include grid-visual;
+  @include pad();
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   
@@ -149,21 +173,42 @@ section.select-events {
   }
 
   li.event {
-    @include span-columns(4);
+    // @include span-columns(12);
+    margin-left: auto;
+    margin-right: auto;
     
   }
   .section-end {
     text-align: center;
   }
+
+  @include media ($medium-screen) {
+    ul.events {
+      @include row();
+    }
+
+    li.event {
+      @include span-columns(6);
+      @include pad();
+      
+    }
+  }
+
+  @include media ($large-screen) {
+    ul.events {
+      @include row();
+    }
+
+    li.event {
+      @include span-columns(4);
+      
+    }
+  }
 }
 
 section.contact {
   @include row();
-  // @include width-container;
-  // @include grid-container;
-  // @include grid-visual;
-  // @include grid-column(10);
-  // @include grid-push(1);
+  @include pad();
   padding-top: 0;
   padding-bottom: $section-padding;
   text-align: center;
@@ -175,28 +220,92 @@ section.contact {
   a.standalone, p {
     color: $white;
     max-width: 18em;
-    // padding: 0 2em;
   }
   .info, .details {
-    @include span-columns(6);
-    // @include grid-column(6);
-    height: 200px;
+    @include span-columns(12);
+    height: auto;
   }
   .info {
-    text-align: right;
-    position: relative;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
     a.standalone {
-      @include vertical-align();
-      margin-right: 1em;
-    }
-    
+      // @include remove-vertical-align();
+      margin: 0;
+
+      &:hover {
+        // color: $blue-shade-1;
+        // color: $blue-shade-2;
+        color: $dark-grey-shade-1;
+      }
+    }   
   }
   .details {
-    text-align: left;
+    text-align: center;
+    float: none;
     p {
-      @include vertical-align();
-      margin-left: 1em;
+      margin: 0;
+      margin: 0 auto;
+      // @include remove-vertical-align();
     }
-    
+  }
+
+  @include media ($medium-screen) {
+    a.standalone, p {
+      color: $white;
+    }
+    .info, .details {
+      @include span-columns(12);
+      height: auto;
+    }
+    .info {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      text-align: center;
+      a.standalone {
+        @include remove-vertical-align();
+        margin: 0;
+      }   
+    }
+    .details {
+      text-align: center;
+      float: none;
+      p {
+        margin: 0;
+        margin: 0 auto;
+        @include remove-vertical-align();
+      }
+    }
+  }
+
+  @include media ($large-screen) {
+    a.standalone, p {
+      color: $white;
+      max-width: 18em;
+    }
+    .info, .details {
+      @include span-columns(6);
+      height: 200px;
+    }
+    .info {
+      // float: right;
+      text-align: right;
+      margin: 0;
+      position: relative;
+      a.standalone {
+        @include vertical-align();
+        display: block;
+        margin-right: 1em;
+        float: right;
+      }
+      
+    }
+    .details {
+      text-align: left;
+      p {
+        @include vertical-align();
+        margin-left: 1em;
+      }
+    }
   }
 }

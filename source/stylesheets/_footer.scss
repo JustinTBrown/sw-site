@@ -1,39 +1,108 @@
 footer {
-  // @include grid-container;
   background-color: $dark-grey;
-  height: 65px;
+  padding-top: $step4;
+  padding-bottom: $step3;
 
   .footer-container {
-    height: 100%;
-    max-width: $container-width;
-    margin: 0 auto;
-    padding: 0 $step3;
+    @include outer-container();
+    @include pad();
 
     .logo {
       @import "logo-horizantal";
-      @include vertical-align(); 
-      display: inline-block;
-      margin-top: $step1;
+      display: block;
+      text-align: center;
     }
     .contact {
-      @include vertical-align(); 
-      display: inline-block;
-      float: right;
-
+      display: block;
       ul {
+        text-align: center;
         li {
-          display: inline-block;
-          padding-left: 2em;
+          display: block;
           img {
             height: 1rem;
             transform: translateY(20%);
           }
           a {
             color: $white;
+          }
+        }
+      }
+    }
+  }
 
-            // &.instagram:before {
-            //   content: url(/images/ig-icon.png);
-            // }
+  @include media ($medium-screen) {
+    // height: 65px;
+
+    // .footer-container {
+
+    //   .logo {
+    //     display: block;
+    //     text-align: center;
+    //   }
+    //   .contact {
+    //     display: block;
+    //     ul {
+    //       text-align: center;
+    //       li {
+    //         display: block;
+    //         img {
+    //           height: 1rem;
+    //           transform: translateY(20%);
+    //         }
+    //         a {
+    //           color: $white;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+  }
+
+  @include media ($large-screen) {
+    padding: 0;
+    .footer-container {
+      height: 100%;
+      // max-width: $container-width;
+      // margin: 0 auto;
+      // padding: 0 $step3;
+
+      .logo {
+        // @include vertical-align(); 
+        display: inline-block;
+        // margin-top: $step1;
+        margin-top: 0.1rem;
+        // position: absolute;
+      }
+      .contact {
+        // @include vertical-align(); 
+        display: inline-block;
+        float: right;
+        // position: absolute;
+
+        ul {
+          margin: 0;
+          li {
+            display: inline-block;
+            padding-left: 2em;
+            img {
+              height: 1rem;
+              transform: translateY(20%);
+            }
+            a {
+              color: $white;
+
+              &:hover {
+                color: $salmon;
+
+                img {
+                  color: $salmon;
+                }
+              }
+
+              // &.instagram:before {
+              //   content: url(/images/ig-icon.png);
+              // }
+            }
           }
         }
       }
