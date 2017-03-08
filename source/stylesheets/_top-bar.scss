@@ -1,10 +1,16 @@
 .navigation {
+  // @include pad(2rem);
+  // @include border-bottom();
   background-color: $white;
   position: fixed;
   width: 100vw;
   top: 0;
   z-index: 9900;
   transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, border-bottom 0.1s ease;
+
+  hr#navHr {
+    transform: translateY(1px);
+  }
 
   // Mobile view
   .navigation-menu-button {
@@ -24,7 +30,6 @@
     @include clearfix;
     @include outer-container();
     @include pad();
-    @include border-bottom();
     position: relative;
     padding: $step3 $step4 $step3 $step3;
     transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, border-bottom 0.1s ease;

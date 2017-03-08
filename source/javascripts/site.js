@@ -24,43 +24,42 @@
 $(window).scroll(function() {
   var viewableOffset = $("html").offset().top - $(window).scrollTop();
   var nav = $('.navigation');
-  var navWrap = $('.navigation-wrapper ');
-  // var navWrapHr = $('#top-bar-hr');
+  // var navWrap = $('.navigation-wrapper ');
+  var navHr = $('#navHr');
   console.log(viewableOffset);
   if (viewableOffset < -70) {
     var navStyles = {
-        // backgroundColor: '#fbf9f1',
         backgroundColor: '#fffefd',
         // borderBottom: 'none'
-        // height: '80',
         // borderBottom: 'solid 1px rgba(0,0,0,0.1)'
     };
     var navWrapStyles = {
+      // borderBottom: 'none'
+    };
+    // navHr.hide();
+    var navHrStyles = {
+      borderTop: 'none',
       borderBottom: 'none'
     };
-    // var hrStyles = {
-    //   borderTop: 'none',
-    //   borderBottom: 'none'
-    // };
   } else {
     var navStyles = {
       backgroundColor: '#F7F2E1',
       // borderBottom: 'solid 1px rgba(0,0,0,0.2)'
-        // height: '120',
         // borderBottom: 'none'
     };
     var navWrapStyles = {
-      borderBottom: 'solid 1px rgba(0,0,0,0.2)'
+      // borderBottom: 'solid 1px rgba(0,0,0,0.2)'
       // borderBottom: 'none'
     };
-    // var hrStyles = {
-    //   borderTop: '1px solid rgba(0, 0, 0, 0.2)',
-    //   borderBottom: '1px solid rgba(255, 255, 255, 0.3)'
-    // };
+    // navHr.show();
+    var navHrStyles = {
+      borderTop: '1px solid rgba(0, 0, 0, 0.2)',
+      borderBottom: '1px solid rgba(255, 255, 255, 0.3)'
+    };
   };
   nav.css( navStyles );
-  navWrap.css( navWrapStyles );
-  // topBarHr.css( hrStyles );
+  // navWrap.css( navWrapStyles );
+  navHr.css( navHrStyles );
 });
 
 $(document).ready(function() {

@@ -16,7 +16,7 @@ title: Sugar Water
 
 <section class="what">
   <div class="heading-box">
-    <h2 class="box h4">What We Do</h2>
+    <h2 id="services" class="box h4">What We Do</h2>
   </div>
   <ul class="block-list">
     <li>
@@ -64,7 +64,7 @@ title: Sugar Water
 <section class="select-drinks">
   <div class="text">
     <div class="heading-box">
-      <h2 class="box h4">Drinks</h2>
+      <h2 id="menu" class="box h4">Drinks</h2>
     </div>
     <p class="section-intro">We’re always playing and experimenting. Here’s some recent additions to our family of original drinks.</p>
     
@@ -89,7 +89,7 @@ title: Sugar Water
 
 <section class="select-events">
   <div class="heading-box">
-    <h2 class="box h4">Events</h2>
+    <h2 id="events" class="box h4">Events</h2>
   </div>
   <ul class="events">
     <% dato.events.sort_by{|event| event.start_date_time }.first(3).each do |event| %>
@@ -109,7 +109,7 @@ title: Sugar Water
 
 <section class="contact">
   <div class="heading-box">
-    <h2 class="box h4">Get in Touch</h2>
+    <h2 id="contact" class="box h4">Get in Touch</h2>
   </div>
   <div class="info">
     <a href="mailto:hello@sugarwater.bar" class="standalone h3">hello@sugarwater.bar</a>
