@@ -39,7 +39,7 @@
     }
 
     @include media ($large-screen) {
-      height: 80px;
+      height: $top-bar-height;
       padding: 0 $step4;
     }
   }

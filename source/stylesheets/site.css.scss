@@ -70,6 +70,7 @@ section.what {
   // @include waves-background;
   // @include width-container;
   // @include grid-container;
+  @include outer-container();
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .heading-box {
@@ -79,17 +80,24 @@ section.what {
     // @include grid-container;
     // @include grid-column(10);
     // @include grid-push(1);
+    // @include row();
 
     li {
+      @include row();
+      // @include columns(12);
       // @include grid-container;
       margin-bottom: 50px;
       &:first-of-type {
         margin-top: 50px;
       }
       img {
+        @include span-columns(6);
+        // @include span-columns(6 of 12);
         // @include grid-column(6);
       }
       .text {
+        @include span-columns(6);
+        // @include span-columns(6 of 12);
         // @include grid-column(6);
         h3 {
           color: $salmon;
@@ -100,23 +108,24 @@ section.what {
       }
     }
   }
-  .standalone {
-    // @include grid-container;
-    // @include grid-column(12);
+  .section-end {
     text-align: center;
   }
-  // @include border-bottom();
 }
 
 section.select-drinks {
+  @include outer-container();
   // @include width-container;
   // @include grid-container;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   .text {
     // @include grid-column(4);
+    @include span-columns(4);
   }
   img {
+    @include span-columns(7);
+    @include shift(1);
     // @include grid-column(7);
     // @include grid-push(1);
   }
@@ -124,6 +133,7 @@ section.select-drinks {
 }
 
 section.select-events {
+  @include outer-container();
   // @include width-container;
   // @include grid-container;
   // @include grid-visual;
@@ -133,17 +143,22 @@ section.select-events {
   .heading-box {
     text-align: center;
   }
-  
-  .standalone {
-    // @include grid-container;
-    // @include grid-column(12);
-    // color: $salmon;
+
+  ul.events {
+    @include row();
+  }
+
+  li.event {
+    @include span-columns(4);
+    
+  }
+  .section-end {
     text-align: center;
   }
-  // @include border-bottom();
 }
 
 section.contact {
+  @include row();
   // @include width-container;
   // @include grid-container;
   // @include grid-visual;
@@ -163,6 +178,7 @@ section.contact {
     // padding: 0 2em;
   }
   .info, .details {
+    @include span-columns(6);
     // @include grid-column(6);
     height: 200px;
   }
