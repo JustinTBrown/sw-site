@@ -41,6 +41,7 @@ $(window).scroll(function() {
       borderTop: 'none',
       borderBottom: 'none'
     };
+    nav.addClass('scrolled');
   } else {
     var navStyles = {
       backgroundColor: '#F7F2E1',
@@ -56,6 +57,7 @@ $(window).scroll(function() {
       borderTop: '1px solid rgba(0, 0, 0, 0.2)',
       borderBottom: '1px solid rgba(255, 255, 255, 0.3)'
     };
+    nav.removeClass('scrolled');
   };
   nav.css( navStyles );
   // navWrap.css( navWrapStyles );
@@ -71,7 +73,24 @@ $(document).ready(function() {
     $('#js-navigation-menu').slideToggle(function(){
       if($('#js-navigation-menu').is(':hidden')) {
         $('#js-navigation-menu').removeAttr('style');
-        // $('#js-navigation-menu').addClass("mobile-menu");
+        $('#overlay').css({
+          backgroundColor: 'rgba(1,1,1,0.0)',
+        });
+        if($('.navigation').hasClass('scrolled')) {
+
+        } else {
+          $('#navHr').show();
+          
+        }
+      } else {
+        $('#overlay').css({
+          backgroundColor: 'rgba(0,0,0,0.2)',
+        });
+        // $('#navHr').css({
+        //   borderTop: 'none',
+        //   borderBottom: 'none'
+        // });
+        $('#navHr').hide();
       }
     });
   });

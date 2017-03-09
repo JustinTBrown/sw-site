@@ -23,6 +23,22 @@ hr {
   // transition: display 0.25s ease-in-out;
   // transition: border-top 0.25s ease-in-out, border-bottom 0.25s ease-in-out;
 }
+#overlay {
+  // position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  // display: none;
+  // background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.0);
+  // background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+  // transition: height 0.25s ease-in-out;
+}
 
 section.intro {
   @include pad(1rem);
@@ -213,7 +229,8 @@ section.select-events {
     }
 
     li.event {
-      @include span-columns(6);
+      // @include span-columns(6);
+      @include grid-item-columns(6);
       @include pad();      
     }
   }
@@ -224,7 +241,8 @@ section.select-events {
     }
 
     li.event {
-      @include span-columns(4);      
+      // @include span-columns(4); 
+      @include grid-item-columns(4);     
     }
   }
 }
