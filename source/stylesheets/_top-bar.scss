@@ -142,9 +142,15 @@
     display: inline-block;
     padding-left: 1em;
     padding-right: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    font-size: 1rem;
 
     &:hover {
       color: $blue-shade-1;
+    }
+    @include media ($medium-screen) {
+      font-size: 0.875rem;
     }
 
     @include media ($large-screen) {
