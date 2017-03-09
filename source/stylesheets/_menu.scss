@@ -1,0 +1,31 @@
+.menu {
+section.intro {
+  @include outer-container();
+  @include pad();
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  .heading-box {
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+
+    p {
+    }
+    
+    @include media ($medium-screen) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+    @include media ($large-screen) {
+      @include span-columns(6);
+      @include shift(3);
+    }
+  }
+
+}
+
+
+}

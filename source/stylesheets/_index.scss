@@ -1,0 +1,300 @@
+.index {
+  section.intro {
+    @include pad(1rem);
+    // padding-top: 20px;
+    position: relative;
+    height: 300px;
+
+    .tagline {
+      @include vertical-align();
+      width: 90%;
+      display: inline-block;
+      z-index: 1;
+      margin: 0;
+    }
+
+    .image {
+      @include vertical-align();
+      top: 60%;
+      width: 40%;
+      display: inline-block;
+      position: absolute;
+      right: 0.5em;
+      z-index: -1;
+    }
+
+    @include media ($medium-screen) {
+      @include outer-container();
+      height: 500px;
+
+      .tagline {
+      position: absolute;
+        width: 70%;
+      }
+      .image {
+        top: 50%;
+        width: 40%;
+        right: 3em;
+      }
+    }
+    @include media ($large-screen) {
+      height: 500px;
+
+      .tagline {
+        width: 52%;
+      }
+      .image {
+        top: 50%;
+        width: 40%;
+        right: 5em;
+      }
+    }
+  }
+
+  section.what {
+    @include outer-container();
+    @include pad();
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    .heading-box {
+      text-align: center;
+    }
+    ul {
+      li {
+        @include row();
+        margin-bottom: 50px;
+        &:first-of-type {
+          margin-top: 50px;
+        }
+        img {
+          @include span-columns(12);
+          // @include shift(12);
+          margin-bottom: $step4;
+        }
+        .text {
+          @include span-columns(12);
+          h3 {
+            color: $salmon;
+          }
+          .subhead {
+            color: $blue-shade-2;
+          }
+        }
+      }
+    }
+    .section-end {
+      text-align: center;
+    }
+
+    @include media ($medium-screen) {
+      ul.block-list {
+        li {
+          img {
+            @include span-columns(5);
+            margin-bottom: 0;
+          }
+          .text {
+            @include span-columns(7);
+          }
+        }
+      }
+    }
+
+    @include media ($large-screen) {
+      ul.block-list {
+        li {
+          img {
+            @include span-columns(6);
+          }
+          .text {
+            @include span-columns(6);
+          }
+        }
+      }
+    }
+  }
+
+  section.select-drinks {
+    @include outer-container();
+    @include pad();
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    .text {
+      ul.drinks {
+        li.drink {
+        }
+      }
+    }
+    img {
+      @include span-columns(12);
+      margin-top: $step5;
+    }
+    .section-end {
+      text-align: center;
+    }
+
+    @include media ($medium-screen) {
+      .text {
+        @include span-columns(6);
+        
+      }
+      img {
+        @include span-columns(5);
+        @include shift(1);
+        margin-top: 0;
+      }
+      .section-end {
+        text-align: left;
+      }
+    }
+
+    @include media ($large-screen) {
+      .text {
+        @include span-columns(4);
+        
+      }
+      img {
+        @include span-columns(7);
+        @include shift(1);
+      }
+    }
+  }
+
+  section.select-events {
+    @include outer-container();
+    @include pad();
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    margin-bottom: $step5;
+    
+    .heading-box {
+      text-align: center;
+    }
+
+    ul.events {
+      @include row();
+      li.event {
+      }
+    }
+
+    .section-end {
+      text-align: center;
+    }
+
+    @include media ($medium-screen) {
+      ul.events {
+        @include row();
+      }
+
+      li.event {
+        // @include span-columns(6);
+        @include grid-item-columns(6);
+        @include pad();      
+      }
+    }
+
+    @include media ($large-screen) {
+      ul.events {
+        @include row();
+      }
+
+      li.event {
+        // @include span-columns(4); 
+        @include grid-item-columns(4);     
+      }
+    }
+  }
+
+  section.contact {
+    padding-top: 0;
+    padding-bottom: $section-padding;
+    text-align: center;
+    background-image: url("/images/tropical-pattern.jpg");
+
+    .heading-box {
+      transform: translateY(-50%);
+    }
+    a.standalone, p {
+      color: $white;
+      max-width: 18em;
+    }
+    .info, .details {
+    }
+    .info {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      text-align: center;
+      a.standalone {
+        margin: 0;
+
+        &:hover {
+          color: $dark-grey-shade-1;
+        }
+      }   
+    }
+    .details {
+      text-align: center;
+      float: none;
+      p {
+        margin: 0;
+        margin: 0 auto;
+      }
+    }
+
+    @include media ($medium-screen) {
+      a.standalone, p {
+        color: $white;
+      }
+      .info, .details {
+        height: auto;
+      }
+      .info {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+        a.standalone {
+          margin: 0;
+        }   
+      }
+      .details {
+        text-align: center;
+        float: none;
+        p {
+          margin: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    @include media ($large-screen) {
+      @include row();
+      a.standalone, p {
+        color: $white;
+        max-width: 18em;
+      }
+      .info, .details {
+        @include span-columns(6);
+        height: 200px;
+      }
+      .info {
+        text-align: right;
+        margin: $step4 $step4 0 inherit;
+        position: relative;
+        a.standalone {
+          @include vertical-align();
+          display: block;
+          margin-right: 1em;
+          float: right;
+        }
+      }
+      .details {
+        margin-top: $step4;
+        text-align: left;
+        p {
+          @include vertical-align();
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}

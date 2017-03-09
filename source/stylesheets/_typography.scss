@@ -1,19 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto:300i,400i|Roboto+Condensed:400,700');
 @import url('//fast.fonts.net/cssapi/1e9b7e06-16c7-4384-8f76-8b995d987481.css');
 
-
-// font-family:'DIN_1451 LT W01 Mittelschrift';
-// font-family:'DIN Next W01 Regular';
-// font-family:'DIN Next W01 Medium';
-// font-family:'DIN Next W01 Bold';
-// font-family:'DIN Neuzeit Grotesk W01 Bold';
-
-
 // Font Stacks
-// $sans-font: 'DIN Next W01 Regular', sans-serif; // Fonts.com
 $sans-font: 'DIN Next W01 Medium', sans-serif; // Fonts.com
-// $sans-font: 'DIN Next W01 Bold', sans-serif; // Fonts.com
-// $sans-font: 'Roboto Condensed', sans-serif; // Google Font
 $serif-font: 'Roboto Slab', serif; // Google Font
 $italic-font: 'Roboto', sans-serif; // Google Font
 
@@ -36,7 +25,6 @@ body {
   font-size: $root-size;
   font-weight: normal;
   line-height: $line-height;
-  // font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -45,11 +33,7 @@ h1, h2, h3, h4, h5, h6,
   color: $blue-shade-2;
   text-transform: uppercase;
   line-height: $line-height;
-  // font-weight: 400;
-  // font-weight: 600;
-  // font-weight: 700;
   font-weight: normal;
-  // font-style: normal;
   letter-spacing: 0.1em;
   margin-top: 0;
   margin-bottom: 0;
@@ -59,13 +43,7 @@ h1, h2, h3, h4, h5, h6,
     background-color: $blue-shade-2;
     display: inline-block;
     padding: 0.8em 1.1em 0.6em;
-    // text-transform: uppercase;
-    // font-weight: 400;
   }
-
-  // &.light {
-  //   color: $white;
-  // }
 }
 .heading-box {
   margin-bottom: $step2;
@@ -78,11 +56,6 @@ h2, .h2 {
 }
 h3, .h3 {
   font-size: 1.25rem;
-  // color: $salmon;
-  // font-size: 1.3em;
-  // text-transform: uppercase;
-  // margin-top: 0;
-  // margin-bottom: 0.2rm;
 }
 h4, .h4 {
   font-size: 1rem;
@@ -94,23 +67,11 @@ h6, .h6 {
   font-size: 0.75rem;
 }
 
-// p, em {
-//   color: $dark-grey;
-  
-//   &.light {
-//     color: $white;
-//   }  
-// }
-
 p {
   margin-top: $step3;
   margin-bottom: $step3;
   line-height: $line-height;
-  // font-family: $serif-font;
-  // // font-size: 0.9em;
-  // font-size: 1em;
   font-weight: 300;
-  // line-height: 1.5;
 
   &.interface {
     font-size: 0.875rem;
@@ -139,25 +100,6 @@ a.standalone {
     color: $blue;
   }
 }
-// .label-1, .label-2 {
-//   font-family: $sans-font;
-//   color: $dark-grey;
-//   text-transform: uppercase;
-//   letter-spacing: 0.1em;
-// }
-
-// .label-1 {
-//   display: block;
-//   font-size: 0.9em;
-// }
-
-// .label-2 {
-//   display: block;
-//   font-size: 0.7em;
-//   line-height: 1.5;
-//   margin-bottom: 0.2em;
-// }
-
 ul {
   list-style: none;
   padding-left: 0;
