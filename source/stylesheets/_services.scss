@@ -1,0 +1,15 @@
+.services {
+  .main-content {
+    @include outer-container(40%);
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+
+    .heading-box {
+      text-align: center;
+      padding-bottom: $step5;
+
+      h1 {
+      }
+    }
+  }
+}

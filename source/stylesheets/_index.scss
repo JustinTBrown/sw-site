@@ -172,6 +172,10 @@
       text-align: center;
     }
 
+    .section-intro {
+      text-align: center;
+    }
+
     ul.events {
       @include row();
       li.event {
