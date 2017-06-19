@@ -5,7 +5,9 @@ $(window).scroll(function() {
   console.log(viewableOffset);
   if (viewableOffset < -70) {
     var navStyles = {
-        backgroundColor: '#fffefd',
+        backgroundColor: '#fff', // white
+        // backgroundColor: '#fffefd', // $white-tint-1
+        // backgroundColor: '#fbf9f1', // $white-tint-super-light-1
     };
     var navWrapStyles = {
     };
@@ -16,7 +18,8 @@ $(window).scroll(function() {
     nav.addClass('scrolled');
   } else {
     var navStyles = {
-      backgroundColor: '#F7F2E1',
+      // backgroundColor: '#F7F2E1',
+      backgroundColor: '#fbf9f1', // $white-tint-super-light-1
     };
     var navWrapStyles = {
     };
