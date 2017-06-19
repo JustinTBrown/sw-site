@@ -1,32 +1,39 @@
 .menu {
-section.intro {
-  @include outer-container();
-  @include pad();
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;
+  section.intro {
+    @include outer-container();
+    @include pad();
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
 
-  .heading-box {
-    text-align: center;
-  }
+    .heading-box {
+      text-align: center;
+    }
 
-  .intro-text {
-    text-align: center;
-
-    p {
+    .intro-text {
+      text-align: center;
       
-    }
-    
-    @include media ($medium-screen) {
-      @include span-columns(10);
-      @include shift(1);
-    }
-    @include media ($large-screen) {
-      @include span-columns(6);
-      @include shift(3);
+      @include media ($medium-screen) {
+        @include span-columns(10);
+        @include shift(1);
+      }
+      @include media ($large-screen) {
+        @include span-columns(6);
+        @include shift(3);
+      }
     }
   }
-
-}
-
-
+  
+  section.select-drinks {
+    @include outer-container();
+    ul.drinks {
+      li.drink {
+        @include media ($medium-screen) {
+          @include grid-item-columns(6);
+        }
+        @include media ($large-screen) {
+          @include grid-item-columns(4);
+        }
+      }
+    }
+  }
 }

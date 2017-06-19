@@ -5,23 +5,25 @@ ul.drinks {
   padding-bottom: $step3;
 
   li.drink {
-    // @include grid-column(4); // Add column contstraint to component instance
+    // Add column contstraint to component instance. For example:
+    // @include media ($medium-screen) {
+    //   @include grid-item-columns(6);
+    // }
+    // @include media ($large-screen) {
+    //   @include grid-item-columns(4);
+    // }
+    @include pad();
     max-width: 20rem;
     margin-top: $step3;
     margin-bottom: $step4;
     margin-left: auto;
     margin-right: auto;
 
-    p.name {
-
-    }
     p.notes {
       color: $blue;
     }
-    p.description {
-
-    }
   }
+
   @include media ($medium-screen) {
     li.drink {
       // display: inline-block;
