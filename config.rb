@@ -65,7 +65,9 @@ end
 #   f.content_types = { drink: 'drink'}
 # end
 
-
+page "/services", :layout => "services"
+page "/menu", :layout => "menu"
+page "/events", :layout => "events"
 # dato.tap do |dato|
 #   @page_title = dato.homepage.page_title
 #   return @page_title

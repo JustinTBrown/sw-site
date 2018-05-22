@@ -4,67 +4,26 @@ title: Sugar Water Menu
 
 <section class="intro">
   <div class="heading-box">
-    <h1 id="services" class="box h4">
+    <h1 id="menu" class="box h4">
       Selected Menu
     </h1>
   </div>
   <div class="intro-text">
-    <p>
-      In order to create and offer the very best service, we focus on the individual beverages we serve and build a balanced menu with attention to the needs of our clients, their guests and event.
-    </p>
-    <p>
-      This is where we get to play and share expressions of creativity with our clients and their guests. We create thoughtfully crafted beverages, whether they are classics, our own innovations, or inspiration from our clients. 
-    </p>
-    <p>
-      We also derive our inspiration from the people around us, collaborating with the very best local businesses, mixologists, and chefs to present our clients with truly noteworthy beverages.
-    </p>
-    <p>
-      We present a small taste of our most beloved classics, creations, and collaborations.
-    </p>
+    <%= dato.menu_page.content  %>
   </div>
 </section>
 <section class="select-drinks">
-  # <% if dato.menu.stirred %>
-  #   <h2 class="h4">Stirred & Spirit-Forward</h2>
-  #   <ul class="drinks">
-  #     <% dato.menu.stirred.each do |drink| %>
-  #       <li class="drink">
-  #         <p class="name h3"><%= drink.name %></p>
-  #         <p class="notes h6"><%= drink.short_description %></p>
-  #         <p class="description interface"><%= drink.ingredients %></p>
-  #         <p class="alcohol-volume h6"><%= drink.ounces %> oz</p>        
-  #       </li>
-  #     <% end %>
-  #   </ul>
-  # <% end %>
+  <ul class="drinks">
+    <% dato.drinks.each do |drink| %>
+      <li class="drink">
+        <p class="name h3"><%= drink.name %></p>
+        <p class="notes h6"><%= drink.short_description %></p>
+        <p class="description interface"><%= drink.ingredients %></p>
+        <p class="alcohol-volume h6"><%= drink.alcohol_volume %> oz</p>        
+      </li>
+    <% end %>
+  </ul>
 
-  # <% if dato.menu.shaken %>
-  #   <h2 class="h4">Shaken & Lively</h2>
-  #   <ul class="drinks">
-  #     <% dato.menu.shaken.each do |drink| %>
-  #       <li class="drink">
-  #         <p class="name h3"><%= drink.name %></p>
-  #         <p class="notes h6"><%= drink.short_description %></p>
-  #         <p class="description interface"><%= drink.ingredients %></p>
-  #         <p class="alcohol-volume h6"><%= drink.ounces %> oz</p>        
-  #       </li>
-  #     <% end %>
-  #   </ul>
-  # <% end %>
-
-  # <% if dato.menu.tall %>
-  #   <h2 class="h4">Tall & Sparkly</h2>
-  #   <ul class="drinks">
-  #     <% dato.menu.tall.each do |drink| %>
-  #       <li class="drink">
-  #         <p class="name h3"><%= drink.name %></p>
-  #         <p class="notes h6"><%= drink.short_description %></p>
-  #         <p class="description interface"><%= drink.ingredients %></p>
-  #         <p class="alcohol-volume h6"><%= drink.ounces %> oz</p>        
-  #       </li>
-  #     <% end %>
-  #   </ul>
-  # <% end %>
 
 </section>
 

@@ -24,7 +24,7 @@ ul.drinks {
     }
   }
 
-  @include media ($medium-screen) {
+  @include media($medium-screen) {
     li.drink {
       // display: inline-block;
       max-width: none;
@@ -39,8 +39,8 @@ ul.drinks {
 ul.events {
   // @include grid-container;
   // text-align: left;
-  padding-top: $step4;
-  padding-bottom: $step3;
+  padding-top: $step3;
+  padding-bottom: $step4;
 
   li.event {
     // @include grid-column(4);
@@ -53,7 +53,6 @@ ul.events {
     // // padding: 0 10px;
     // padding: 50px 0 50px;
 
-
     .date {
       text-transform: none;
       color: $blue-shade-1;
@@ -64,15 +63,15 @@ ul.events {
       // font-size: 1.2em;
       // margin: 4px 0 2px;
     }
-    .location, .time {
+    .location,
+    .time {
       color: $dark-grey;
     }
     .description {
       margin-top: $step3;
-
     }
   }
-  @include media ($medium-screen) {
+  @include media($medium-screen) {
     li.event {
       // display: inline-block;
       max-width: none;

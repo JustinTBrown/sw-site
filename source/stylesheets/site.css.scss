@@ -12,6 +12,7 @@
 @import "index";
 @import "services";
 @import "menu";
+@import "events";
 
 body {
   // background-color: $white;
@@ -39,13 +40,11 @@ hr {
   pointer-events: none;
   // display: none;
   // background-color: rgba(0,0,0,0.2);
-  background-color: rgba(0,0,0,0.0);
+  background-color: rgba(0, 0, 0, 0);
   // background-color: transparent;
   transition: background-color 0.25s ease-in-out;
   // transition: height 0.25s ease-in-out;
 }
 .main {
   margin-top: $top-bar-height;
-  
 }
-

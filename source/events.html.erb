@@ -1,0 +1,44 @@
+---
+title: Sugar Water Events
+---
+
+<section class="intro">
+  <div class="heading-box">
+    <h1 id="events" class="box h4">
+      Events
+    </h1>
+  </div>
+  <div class="intro-text">
+    <%= dato.events_page.content  %>
+  </div>
+</section>
+
+<section class="events-section">
+  <h2 class="h4">Upcoming Events</h2>
+  <ul class="events">
+    <% dato.events.find_all { |event|  event.end_date_time.localtime > Time.now.localtime }.each do |event| %>
+      <li class="event">
+        <p class="date h5"> <%= event.start_date_time.localtime.strftime("%A, %B %e") %> </p>
+        <p class="name h3"> <%= event.name %></p>
+        <p class="location h6"><a href=" <%= event.map_link %> " target="_blank"> <%= event.location %> </a></p>
+        <p class="time h6"> <%= event.start_date_time.localtime.strftime("%l%P") %> - <%= event.end_date_time.localtime.strftime("%l%P") %> </p>
+        <p class="description interface"> <%= event.short_description %> </p>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
+<section class="events-section">
+  <h2 class="h4">Past Events</h2>
+  <ul class="events">
+    <% dato.events.find_all { |event|  event.end_date_time.localtime < Time.now.localtime }.each do |event| %>
+      <li class="event">
+        <p class="date h5"> <%= event.start_date_time.localtime.strftime("%A, %B %e") %> </p>
+        <p class="name h3"> <%= event.name %></p>
+        <p class="location h6"><a href=" <%= event.map_link %> " target="_blank"> <%= event.location %> </a></p>
+        <p class="time h6"> <%= event.start_date_time.localtime.strftime("%l%P") %> - <%= event.end_date_time.localtime.strftime("%l%P") %> </p>
+        <p class="description interface"> <%= event.short_description %> </p>
+      </li>
+    <% end %>
+  </ul>
+</section>
